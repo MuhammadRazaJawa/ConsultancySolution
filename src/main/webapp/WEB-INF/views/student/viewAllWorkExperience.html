@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:if="${allWorkExperienceList != null}">
+
+	<table border="1">
+		<tr th:each="workExperience : ${allWorkExperienceList}">
+			<td th:text="${workExperience.workExperienceId}"></td>
+			<td th:text="${workExperience.organization}"></td>
+			<td th:text="${workExperience.designation}"></td>
+			<td th:text="${workExperience.duties}"></td>
+			<td th:text="${workExperience.startDate}"></td>
+			<td th:text="${workExperience.endDate}"></td>
+			<!-- <td th:text="${workExperience.generalDetailId.generalDetailId}"></td> -->
+			<td>
+				<a th:href="@{'getClientDetail?id=' + ${workExperience.generalDetailId.generalDetailId}}">Edit</a>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+
+<div th:if="${allWorkExperienceList == null}">
+
+	<table border="1">
+		<tr>
+ 
+ 			<td><h1>No Data Found</h1></td>
+		</tr>
+	</table>
+
+</div>
+</body>
+</html>

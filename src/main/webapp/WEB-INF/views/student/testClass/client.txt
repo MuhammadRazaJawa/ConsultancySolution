@@ -1,0 +1,29 @@
+﻿[{
+ "sr": "1",
+ "name": "Waqas",
+ "age": "24",
+ "country": "pakistan",
+ "city": "lahore",
+ "cell": "1111",
+ "other": "555",
+ "lang": "gandi",
+  "nic": "56565",
+  "status": "slow",
+  "email": "gatu@gatu.com",
+  "passport": "211"
+ }, 
+ {
+ "sr": "1",
+ "name": "Raza",
+ "age": "24",
+ "country": "pakistan",
+ "city": "lahore",
+ "cell": "1111",
+  "other": "5555",
+   "lang": "English",
+    "nic": "56565",
+	 "status": "active",
+	  "email": "Lion@lion.com",
+	   "passport": "47854"
+ }
+ ]

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>CSS</title>
+
+  <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/reset.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/style.css}" />
+
+  <link rel="stylesheet"  type="text/css"  th:href="@{/resources/Interface/js/jquery.wysiwyg.css}" />
+    <link rel="stylesheet"  type="text/css" media="screen"  th:href="@{/resources/Interface/js/colorbox.css}" />
+    <link  rel="stylesheet" type="text/css" media="screen" th:href="@{/resources/Interface/js/colorbox-custom.css}" />
+
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery-1.3.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.colorbox-min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.ui.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.corners.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/bg.pos.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.wysiwyg.js}"></script>
+    
+    <script type="text/javascript" th:src="@{/resources/Interface/js/tabs.pack.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/cleanity.js}"></script>  
+    
+    
+    <!-- ========================================================================================= -->
+ 
+ <script 	th:src="@{/resources/Interface/DT/DataTables-1.9.4/media/js/jquery.js}" type="text/javascript"></script>
+<script 	th:src="@{/resources/Interface/DT/DataTables-1.9.4/media/js/jquery.dataTables.js}" type="text/javascript"></script>
+<script 	th:src="@{/resources/Interface/DT/DataTables-1.9.4/media/js/jquery.dataTables.min.js}" type="text/javascript"></script>
+<!--  <script 	th:src="@{/resources/Interface/DT/DataTables-1.9.4/media/js/SimpleOne.js}" type="text/javascript"></script> -->
+ <script 	th:src="@{/resources/Interface/DT/DataTables-1.9.4/media/js/dttt.js}" type="text/javascript"></script> 
+
+  <link th:href="@{/resources/Interface/DT/DataTables-1.9.4/extras/TableTools/media/css/TableTools_JUI.css}" rel="stylesheet" type="text/css"/>   
+<link th:href="@{/resources/Interface/DT/DataTables-1.9.4/media/css/demo_table.css}" rel="stylesheet" type="text/css"/> 
+<link th:href="@{/resources/Interface/DT/DataTables-1.9.4/media/css/demo_table_jui.css}" rel="stylesheet" type="text/css"/> 
+<link th:href="@{/resources/Interface/DT/DataTables-1.9.4/examples/examples_support/themes/smoothness/jquery-ui-1.8.4.custom.css}" rel="stylesheet" type="text/css"/> 
+
+ 
+	  
+	  <!-- ========================================================================================= -->
+	  
+
+	
+
+
+</head>
+<body>
+
+<div id="header">
+      <div id="top">
+     
+      <h1><a href="#">CSS </a></h1>
+      <p id="userbox">Hello <strong>Muhammad Raza</strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp;<a href="#">Logout</a> <br />
+      <small>Last Login: 12 May 2009</small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li class="selected"><a href="#">Dashboard</a></li>
+        <li><a class="top-level" href="#">Users <span>&nbsp;</span></a>
+          <ul>
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Edit Users</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a class="top-level" href="#">Settings <span>&nbsp;</span></a>
+            <ul>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">File Paths</a></li>
+            <li><a href="#">User Profiles</a></li>
+          </ul></li>
+      </ul>
+	
+      <span class="clearFix">&nbsp;</span>
+    
+    </div><!-- end of #header -->
+
+
+<div id="demo"> 
+
+
+ <table class="display" id="example">
+		
+		<thead>
+		
+		<tr>
+		
+		<th>Sr.#</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Country</th>
+		<th>City</th>
+		<th>Cell #</th>
+		<th>Other #</th>
+		<th>First Language</th>
+		<th>NIC #</th>
+		<th>Status</th>
+		<th>Email</th>
+		<th>Passport</th>		
+		 
+		
+		 
+		</tr>
+		
+		</thead>
+		<tbody> 
+		
+		<tr th:each="client : ${allClientList}">
+			<td th:text="${client.generalDetailId}"></td>
+			<td th:text="${client.firstName}"></td>
+			<td th:text="${client.age}"></td>
+			<td th:text="${client.country}"></td>
+			<td th:text="${client.city}"></td>
+			<td th:text="${client.mobileNumber}"></td>
+			<td th:text="${client.otherContact}"></td>
+			<td th:text="${client.firstLanguage}"></td>
+			<td th:text="${client.nic}"></td>
+			<td th:text="${client.status}"></td>
+			<td th:text="${client.email}"></td>
+			<td th:text="${client.passport}"></td>
+			
+		</tr>
+		
+		</tbody>
+	</table>
+
+	
+
+</div>
+
+
+    <div id="footer-wrap" style="position:relative; bottom:-300px; width: 100%">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+           
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">CSS</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2013 Consultancy Software Solution. <a href="">CSS</a>, 
+            via <a href="">Orange Developers</a></p>
+        </div>
+        
+	</div>
+</div>
+    
+   
+    	
+    	
+    
+    
+  
+</body>
+</html>
+
+
+
+

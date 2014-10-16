@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:if="${allReferenceList != null}">
+	<table border="1">
+		<tr th:each="reference : ${allReferenceList}">
+			<td th:text="${reference.referenceId}"></td>
+			<td th:text="${reference.name}"></td>
+			<td th:text="${reference.designation}"></td>
+			<td th:text="${reference.relationship}"></td>
+			<td th:text="${reference.address}"></td>
+			<td th:text="${reference.mobileContact}"></td>
+			<td th:text="${reference.otherContact}"></td>
+			<td th:text="${reference.fax}"></td>
+			<td th:text="${reference.email}"></td>
+			<td th:text="${reference.yearsKnown}"></td>
+			<!-- <td th:text="${reference.generalDetailId.generalDetailId}"></td> -->
+			<td>
+				<a th:href="@{'getClientDetail?id=' + ${reference.generalDetailId.generalDetailId}}">Edit</a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div th:if="${allReferenceList == null}">
+
+	<table border="1">
+		<tr>
+ 
+ 			<td><h1>No Data Found</h1></td>
+		</tr>
+	</table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" type="text/css" th:href="@{/resources/Interface/Login/loginPage/sample.css}"/> 
+<link rel="stylesheet" type="text/css" th:href="@{/resources/Interface/Login/loginPage/Lstyle.css}"/>
+
+       	<link rel="stylesheet" type="text/css" th:href="@{/resources/Interface/Login/css/TitlePage/css/supersized.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/resources/Interface/Login/css/TitlePage/theme/supersized.shutter.css}" />
+
+<script type="text/javascript" th:src="@{/resources/Interface/Login/js/loginPage/cufon-yui.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Login/js/loginPage/ChunkFive_400.font.js}"></script>
+
+<script type="text/javascript" th:src="@{/resources/Interface/Login/css/TitlePage/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Login/css/TitlePage/js/jquery.easing.min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Login/css/TitlePage/js/supersized.3.2.7.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Login/css/TitlePage/theme/supersized.shutter.min.js}"></script>
+		
+<script type="text/javascript">
+	Cufon.replace('h1',{ textShadow: '1px 1px #fff'});
+	Cufon.replace('h2',{ textShadow: '1px 1px #fff'});
+	Cufon.replace('h3',{ textShadow: '1px 1px #000'});
+	Cufon.replace('.back');
+	
+/* 	$( document ).ready(function() {
+	        alert( "Thanks for visiting!" );
+	}); */
+</script>
+
+
+		
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   3000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	700,		// Speed of transition
+															   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/11.png', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/22.png', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-2.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},  
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/33.png', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-3.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/44.png', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-1.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/55.png', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-2.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/66.png', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-3.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/77.png', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-1.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/88.png', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-2.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
+														{image : 'resources/Interface/Login/css/TitlePage/titleCol/99.png', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
+														/* {image : 'css/TitlePage/titleCol/10.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
+														{image : 'css/TitlePage/titleCol/12.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
+														{image : 'css/TitlePage/titleCol/13.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
+														{image : 'css/TitlePage/titleCol/14.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
+ */												]
+					
+				});
+		    });
+		    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<style type="text/css">
+		ul#demo-block{ margin:0 15px 15px 15px; }
+			ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:url('img/bg-black.png'); font:11px Helvetica, Arial, sans-serif; }
+			ul#demo-block li a{ color:#eee; font-weight:bold; }
+			
+			#radioButton
+			{
+	
+				/* border:2px dotted #33CC33; */
+		 		 width: 2.0em;
+  				height: 2.0em;
+  				margin-left: 50px;
+	 			
+			}
+			
+			#loginButton
+			{
+  				margin-right: 100px;
+	 			
+			}
+			
+			/* 	@font-face
+				{
+				font-family: Signika-Bold;
+				src: url(/css/fontfile/Signika-Bold.ttf);
+				}
+				
+				
+				  #r{
+				    float: left;
+				    position: absolute; 
+					top:5px; 
+					
+				  }
+				
+				input
+				{
+				font-family:Signika-Bold;
+				font-size:24px;
+				} */
+	</style>
+
+
+
+</head>
+
+   <body style="background-color:#FFF;">
+   
+   	 <div class="wrapper">
+   	<!--  <a th:href="@{/}"></a> -->
+			<h1 style="color:#F60; text-align:center;">Consultancy Software Solution</h1>
+			<h2 style="text-align:center;"> <span>Web Portal</span> </h2>
+			<div class="content">
+				<div id="form_wrapper" class="form_wrapper">
+					<form class="register" action="index.html">
+						<h3>Register</h3>	
+						<div class="column">
+							<div>
+								<label>First Name:</label>
+								<input type="text" />
+								<span class="error">This is an error</span>
+							</div>
+							<div>
+								<label>Last Name:</label>
+								<input type="text" />
+								<span class="error">This is an error</span>
+							</div>
+						<!-- 	<div>
+								<label>Website:</label>
+								<input type="text" value="http://"/>
+								<span class="error">This is an error</span>
+							</div> -->
+						</div>
+						<div class="column">
+							<div>
+								<label>Username:</label>
+								<input type="text"/>
+								<span class="error">This is an error</span>
+							</div>
+							<!-- <div>
+								<label>Email:</label>
+								<input type="text" />
+								<span class="error">This is an error</span>
+							</div> -->
+							<div>
+								<label>Password:</label>
+								<input type="password" />
+								<span class="error">This is an error</span>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="remember">
+								<input type="checkbox" />
+								<span>Send me updates</span>
+							</div>
+							<input type="submit" value="Register" />
+							<a href="index.html" rel="login" class="linkform">You have an account already? Log in here</a>
+							<div class="clear"></div>
+						</div>
+					</form>
+					<form class="login active" th:action="@{/login}" method="POST">
+						<h3>Login</h3>
+						<div>
+							<label>Username:</label>
+							<input type="text" name="username" />
+							<span class="error">This is an error</span>
+						</div>
+						<div>
+							<label>Password: <a href="forgot_password.html" rel="forgot_password" class="forgot linkform">Forgot your password?</a></label>
+							<input type="password" name="password" />
+							<span class="error">This is an error</span>
+						</div>
+						<div class="bottom">
+							<!-- <div class="remember"><input type="checkbox" /><span>Keep me logged in</span></div> -->
+							<br/>
+							<!-- <div>
+								<input id="radioButton" type="radio" name="status" value="user" /> User  
+								<input id="radioButton" type="radio" name="status" value="admin" /> Admin  <br/>
+								
+							</div> -->
+							<input id="loginButton" type="submit" value="Login"></input>
+						<!-- 	<a href="register.html" rel="register" class="linkform">You don't have an account yet? Register here</a> -->
+							<div class="clear"></div>
+						</div>
+					</form>
+					<form class="forgot_password" th:action="@{/resetPassword}">
+						<h3>Forgot Password</h3>
+						<div>
+							<label>Username or Email:</label>
+							<input type="text" name="email" />
+							<span class="error">This is an error</span>
+						</div>
+						<div class="bottom">
+							<input type="submit" value="Send reminder"></input>
+							<a href="index.html" rel="login" class="linkform">Suddenly remebered? Log in here</a>
+						<!-- 	<a href="register.html" rel="register" class="linkform">You don't have an account? Register here</a> -->
+							<div class="clear"></div>
+						</div>
+					</form>
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+		</div> 	
+  <!--  
+   <ul id="demo-block">
+		<li><a href="http://buildinternet.com/project/supersized/" target="_blank"><img th:src="@{/css/TitlePage/img/supersized-logo.png}"/></a></li>
+		<li>Photographers: <a href="http://cargocollective.com/mariakazvan" target="_blank">Maria Kazvan</a>, <a href="http://colindub.com" target="_blank">Colin Wojno</a>, &amp; <a href="http://brookeshaden.com/" target="_blank">Brooke Shaden</a></li>
+	</ul>
+	 -->
+	<!--End of styles-->
+
+	<!--Thumbnail Navigation-->
+<!-- 	<div id="prevthumb"></div>
+	<div id="nextthumb"></div> -->
+	
+	<!--Arrow Navigation-->
+	<!-- <a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a> -->
+	
+<!-- 	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div> -->
+	
+	<!--Time Bar-->
+<!-- 	<div id="progress-back" class="load-item">
+		<div id="progress-bar"></div>
+	</div>
+	 -->
+	<!--Control Bar-->
+	<div id="controls-wrapper" class="load-item">
+		<div id="controls">
+		
+		
+		
+			
+			<!-- <a id="play-button"><img id="pauseplay" src="@{/css/TitlePage/img/pause.png}"/></a> -->
+		
+			<!--Slide counter-->	
+		<!-- 	<div id="slidecounter">
+				<span class="slidenumber"></span> / <span class="totalslides"></span>
+				
+				
+			
+			</div> -->
+			
+			<!--Slide captions displayed here-->
+		<!-- 	<div id="slidecaption"> 
+			
+			
+			
+			</div>
+			 -->
+			<!--Thumb Tray button-->
+		<!-- 	<a id="tray-button"><img id="tray-arrow" src="@{/css/TitlePage/img/button-tray-up.png}"/></a> -->
+			
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+		
+			
+		</div>
+	</div>
+	
+		<!-- The JavaScript -->
+		<script type="text/javascript">
+			$(function() {
+					//the form wrapper (includes all forms)
+				var $form_wrapper	= $('#form_wrapper'),
+					//the current form is the one with class active
+					$currentForm	= $form_wrapper.children('form.active'),
+					//the change form links
+					$linkform		= $form_wrapper.find('.linkform');
+						
+				//get width and height of each form and store them for later						
+				$form_wrapper.children('form').each(function(i){
+					var $theForm	= $(this);
+					//solve the inline display none problem when using fadeIn fadeOut
+					if(!$theForm.hasClass('active'))
+						$theForm.hide();
+					$theForm.data({
+						width	: $theForm.width(),
+						height	: $theForm.height()
+					});
+				});
+				
+				//set width and height of wrapper (same of current form)
+				setWrapperWidth();
+				
+				/*
+				clicking a link (change form event) in the form
+				makes the current form hide.
+				The wrapper animates its width and height to the 
+				width and height of the new current form.
+				After the animation, the new form is shown
+				*/
+				$linkform.bind('click',function(e){
+					var $link	= $(this);
+					var target	= $link.attr('rel');
+					$currentForm.fadeOut(400,function(){
+						//remove class active from current form
+						$currentForm.removeClass('active');
+						//new current form
+						$currentForm= $form_wrapper.children('form.'+target);
+						//animate the wrapper
+						$form_wrapper.stop()
+									 .animate({
+										width	: $currentForm.data('width') + 'px',
+										height	: $currentForm.data('height') + 'px'
+									 },500,function(){
+										//new form gets class active
+										$currentForm.addClass('active');
+										//show the new form
+										$currentForm.fadeIn(400);
+									 });
+					});
+					e.preventDefault();
+				});
+				
+				function setWrapperWidth(){
+					$form_wrapper.css({
+						width	: $currentForm.data('width') + 'px',
+						height	: $currentForm.data('height') + 'px'
+					});
+				}
+				
+				/*
+				for the demo we disabled the submit buttons
+				if you submit the form, you need to check the 
+				which form was submited, and give the class active 
+				to the form you want to show
+				*/
+				/*$form_wrapper.find('input[type="submit"]')
+							 .click(function(e){
+								e.preventDefault();
+							 });*/	
+			});
+        </script>
+	
+   
+
+	
+    </body>
+    
+ </html>

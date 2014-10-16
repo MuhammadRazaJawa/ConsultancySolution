@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+
+	    <link  rel="stylesheet" type="text/css" th:href="@{/resources/FormValidation/css/fv.css}" /> 
+
+	 <!-- ===================== Dashboard Interface ================================ -->
+	
+	<link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/reset.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/style.css}" />
+    <link rel="stylesheet"  type="text/css"  th:href="@{/resources/Interface/js/jquery.wysiwyg.css}" />
+    <link rel="stylesheet"  type="text/css" media="screen"  th:href="@{/resources/Interface/js/colorbox.css}" />
+    <link  rel="stylesheet" type="text/css" media="screen" th:href="@{/resources/Interface/js/colorbox-custom.css}" />
+    
+    <!-- ======================== Custom CSS =========================================== -->
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/myCustom.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/customCSS/tags.css}" />    
+    
+
+
+ <script type="text/javascript" th:src="@{/resources/js/jquery.min.js}"> </script>
+<script type="text/javascript" th:src="@{/resources/js/jquery-2.0.3.js}"></script>
+ <script type="text/javascript" th:src="@{/resources/js/myCustomJS.js}"></script> <!-- All Student Portal Buttons Working Aniaa Janiaa -->
+<script type="text/javascript" th:src="@{/resources/js/selectOption.js}"></script> <!-- All Client Buttons Working Aniaa Janiaa -->
+
+<!-- ========================  Add Multiple Fields =========================================== -->
+
+<script type="text/javascript" th:src="@{/resources/js/addPOSMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addLangMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addEduMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addWorkExpMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addRefMultiple.js}"></script>
+
+<!-- ========================   Custom Validation =========================================== -->
+
+ 	 <script type="text/javascript" th:src="@{/resources/Interface/Validation/clientFormValidation.js}"></script> <!-- Empty Checks & Alerts -->
+
+
+	 
+ <!-- ========================  Dashboard Interface =========================================== -->	 
+	 
+     <script type="text/javascript" th:src="@{/resources/Interface/js/jquery-1.3.2.min.js}"></script> 
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.colorbox-min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.ui.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.corners.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/bg.pos.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.wysiwyg.js}"></script>    
+    <script type="text/javascript" th:src="@{/resources/Interface/js/tabs.pack.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/cleanity.js}"></script> 
+    
+      <script type="text/javascript">
+ 		
+    $( document ).ready(function() {
+        
+    	
+    		$("#searchCriteriaDiv").show(500);
+    		
+    	
+    	
+    });
+  
+     </script>
+
+
+</head>
+
+<body>
+
+ <div id="container">
+ 
+<!--  <div th:include="/fragments/header :: header">  </div>
+ -->   
+ 
+ 
+ <div id="header">
+      <div id="top">
+     
+      <h1><a href="#">CSS </a></h1>
+      <p id="userbox">Hello <strong>Muhammad Raza</strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp;<a href="#">Logout</a> <br />
+      <small>Last Login: 12 May 2009</small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li class="selected"><a href="#">Dashboard</a></li>
+        <li><a class="top-level" href="#">Users <span>&nbsp;</span></a>
+          <ul>
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Edit Users</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a class="top-level" href="#">Settings <span>&nbsp;</span></a>
+            <ul>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">File Paths</a></li>
+            <li><a href="#">User Profiles</a></li>
+          </ul></li>
+      </ul>
+	
+      <span class="clearFix">&nbsp;</span>
+    
+    </div><!-- end of #header -->
+
+<div id="content">
+
+	<div id="content-top">
+   
+    <h2>Dashboard</h2>
+   
+      <span class="clearFix">&nbsp;</span>
+      </div><!-- end of div#content-top -->
+     
+     
+      <!-- <div th:include="/fragments/QuickLinks :: QuickLinks">  </div> -->
+      
+      <div id="left-col">
+      
+      <div class="box">
+              <h4 class="yellow">CLIENT</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone -->
+              <ul class="list-links">
+                  <li><a href="#"><button id="addClientDetail">  Add Client </button></a></li>
+                  <li><a href="#"><button id="searchCriteriaDetail"> Search Criteria</button> </a></li>
+                 
+                  <li><a href="#"><button id="showAllDetail"> Show All</button> </a></li>
+                  <li><a href="#"><button id="cancelAllDetail"> Cancel</button> </a></li>
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
+          
+          
+          
+      
+	  <div class="box">
+              <h4 class="yellow">VIEWS</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone -->
+              <ul class="">
+                  <li><a th:href="@{/viewAllClient}"> <button id="" type="button">View All Clients</button> </a></li>
+                   <li><a th:href="@{/viewAllCurrentStudies}"> <button id="" type="button">View Current Studies</button> </a></li>
+                   <li><a th:href="@{/viewAllEducationalDetail}"> <button id="" type="button">View Education Details</button> </a></li>
+                   <li><a th:href="@{/viewAllLanguage}"> <button id="" type="button">View Language Details</button> </a></li>
+                 
+                   <li><a th:href="@{/viewAllPersonalDetail}"> <button id="" type="button">View Language Details</button> </a></li>
+                   <li><a th:href="@{/viewAllPersonalStatement}"> <button id="" type="button">View Language Details</button> </a></li>
+                  
+                  
+                  <li><a th:href="@{/viewAllClientTwo}"> <button id="" type="button">View Clients DT</button> </a></li>
+                    <li><a href="#"> View Personal Detail </a></li>
+                 
+                  <li><a href="#"> View Current Study </a></li>
+                  <li><a href="#"> View Program Of Study </a></li>
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
+
+
+    
+      <img style="margin-left:30px;"  th:src="@{/resources/Interface/icons/logo.png}" width="160px" height="150px" />
+ 
+          
+      </div> <!-- end of div#left-col -->
+     
+ 
+       <div id="mid-col" class="full-col">  
+        
+		 <div class="box">
+      		<h4 class="white">Forms</h4>
+        <div class="box-container">     		
+      		
+            <div id="addClientDiv" align="center" style="display:none;">
+
+<h1> Personal Details </h1>  <br/><br/><br/>
+
+
+
+	<form th:action="@{addClient}" novalidate="">
+				
+					<div class="item">
+						<label>
+							<span> Full Name:</span>
+							<input data-validate-length-range="6" data-validate-words="2"  name="firstName" placeholder="e.g Waqas Shah" required='required'  />		
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Mention your Full Name here ! At least 2 words</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<label>
+							<span>Father's Name:</span>
+							<input name="fatherName" type="text" placeholder="e.g Muhammad Raza" required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Father's Name here</p>
+							</div>
+						</div>    
+					</div>
+					
+					<div class="item">
+						<label>
+							<span>Age:</span>
+							<input type="number" class='number' name="age" data-validate-minmax="0,100" required='required'/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Age must be between 0 and 100</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="item">
+						<label>
+							<span>Country:</span>
+							<select class="required" name="country">
+								<option value="">-- none --</option>
+								<option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>  
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose Country Shah saiibbb?</p>
+							</div>
+						</div>
+					</div>
+				
+				
+				<div class="item">
+						<label>
+							<span>City:</span>
+							<select class="required" name="city">
+								<option value="">-- none --</option>
+									<option th:each="city : ${cityList}"  th:value="${city.cityId}" th:text="${city.cityName}" ></option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose City Shah saiibbb?</p>
+							</div>
+						</div>
+					</div>
+					
+					
+			
+			<div class="item">
+						<label>
+							<span>Mobile Number:</span>
+							<input type="tel" class='tel' name="mobileNumber" required='required' data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+			 </div>
+			 
+			 <div class="item">
+						<label>
+							<span>Other Contact:</span>
+							<input type="tel" class='tel' name="otherContact" required='required' data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+			 </div>
+			 
+			 	<div class="item">
+						<label>
+							<span>First Language</span>
+							<input class='optional' name="firstLanguage" data-validate-length-range="5,20" type="text" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>What is your First Language</p>
+							</div>
+						</div>
+                        <span class='extra'>(optional)</span>
+					</div>
+					
+				<div class="item">
+						<label>
+							<span>Email</span>
+							<input name="email" class='email' required="" type="email" />
+						</label>
+					</div>
+				
+				
+					<div class="item multi required">
+						<label for='multi_first'>
+							<span>NIC</span>
+						</label>
+						<div class='input'>
+							<input type="text" name="multi1" maxlength='5' id='multi_first'/>
+							<input type="text" name="multi2" maxlength='8'/>
+							<input type="text" name="multi3" maxlength='2'/>
+							<input data-validate-length-range="15" data-validate-pattern="alphanumeric" id="serial" name="nic" type="hidden" required='required' />
+						</div>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your National Identity Card Number Here !</p>
+							</div>
+						</div>
+					</div>
+					
+				
+					<div class="item">
+						<label>
+							<span>Status</span>
+							<select class="required" name="status">
+								<option value="">-- none --</option>
+								<option value="o1">Active</option>
+								<option value="o2">In-Active</option>
+					
+						  </select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose something or choose not. what shall it be?</p>
+							</div>
+						</div>
+					</div>
+				
+				<!-- <button id='send' type='submit'>Submit</button> -->
+				<button  class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+				 <button   class="saveBtn" id="cancelACD"> <img th:src="@{/resources/Interface/icons/close3.png}" /> </button><br/><br/><br/> <br/><br/><br/>
+			</form>	
+
+
+
+
+
+</div>
+
+<div id="searchCriteriaDiv" align="center">
+
+<h1>Now ! Save Search Criteria </h1>  <br/><br/><br/>
+
+
+
+<form  th:action="@{saveSearchCriteria}" novalidate="">
+
+	<input type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" />
+	
+<div class="item">
+						<label>
+							<span>Country:</span>
+							<select class="required" name="country">
+								<option value="">-- none --</option>
+								<!-- <option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>  -->
+								<option value="o1">Pakistan</option>
+								<option value="o2">Turkey</option> 
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose Country Shah saiibbb?</p>
+							</div>
+						</div>
+					</div>
+				
+				
+				<div class="item">
+						<label>
+							<span>City:</span>
+							<select class="required" name="city">
+								<option value="">-- none --</option>
+									<!-- <option th:each="city : ${cityList}"  th:value="${city.cityId}" th:text="${city.cityName}" ></option> -->
+									<option value="o1">Lahore</option>
+								<option value="o2">Faisalabad</option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose City Shah saiibbb?</p>
+							</div>
+						</div>
+			  </div>
+
+
+
+			<div class="item">
+						<label>
+							<span>Institute Type:</span>
+							<select class="required" name="instituteType">
+								<option value="">-- none --</option>
+								<option value="o1">University</option>
+								<option value="o2">In-College</option>					
+						  </select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose something or choose not. what shall it be?</p>
+							</div>
+						</div>
+			</div>
+			
+			<div class="item">
+						<label>
+							<span>Institute list:</span>
+							<select class="required" name="institute">
+								<option value="">-- none --</option>
+								<option value="o1">LUMS</option>
+								<option value="o2">FAST</option>
+								<option value="o2">GCU</option>
+								<option value="o2">NUST</option>
+					
+						  </select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose something or choose not. what shall it be?</p>
+							</div>
+						</div>
+			</div>
+			
+			<div class="item">
+						<label>
+							<span>Offered Programs List:</span>
+							<select class="required" name="programOffered">
+								<option value="">-- none --</option>
+								<option value="o1">MBA</option>
+								<option value="o2">Computer Science</option>
+								<option value="o2">Networking</option>
+								<option value="o2">Accounting</option>
+					
+						  </select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Choose something or choose not. what shall it be?</p>
+							</div>
+						</div>
+			</div>
+
+	<button id='send' type='submit'>Submit</button>
+			</form>	
+
+
+</div>
+
+
+            
+            
+      	</div><!-- end of div.box-container -->
+      	</div> <!-- end of div.box -->
+          
+         	
+      </div><!-- end of div#mid-col -->   
+     
+      
+      <!--   <div th:include="/resources/fragments/Calender :: Calender">  </div>  -->
+      
+    <!--  <div id="right-col">
+		
+          <div class="box">
+          		<h4 class="light-grey">Date &amp; Calendar</h4>
+         <div class="box-container">
+		  		<div id="date-container">
+		  		<img th:src="@{/resources/Interface/images/sunny.png}" alt="Sunny" /> <span class="hour">22:54</span> <span class="date">18th May 2009<br/>Friday</span>
+                 <span class="clearFix">&nbsp;</span>
+		  	</div>end of div#box-date
+		  	
+		  	<div id="calendar-container">
+		  		<h5>Calendar</h5>
+				<div id="calendar"></div>
+		  	    	<div class="inner-nav">
+                		<div class="align-left"><a href="#"><span>+ add event</span></a></div>
+                		<div class="align-right"><a href="#"><span>? list events</span></a></div>
+                        <span class="clearFix">&nbsp;</span>
+                	</div> 
+		  	</div>end of div#calendar-container
+          </div>end of div.box-container  
+          </div>end of div.box  
+         	          
+      </div>end of div#right-col    --> 
+      
+      
+      
+      <span class="clearFix">&nbsp;</span>     
+</div><!-- end of div#content -->
+<div class="push"></div>
+</div><!-- end of #container -->
+
+<!-- <div th:include="/fragments/footer :: footer" >
+   
+   </div> -->
+
+<div id="footer-wrap">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+           
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">CSS</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2013 Consultancy Software Solution. <a href="">CSS</a>, 
+            via <a href="">Orange Developers</a></p>
+        </div>
+        
+	</div>
+</div>
+
+ <!-- https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js -->
+  <script type="text/javascript" th:src="@{/resources/FormValidation/js/jquery.min.js}"></script> 
+  <script type="text/javascript" th:src="@{/resources/FormValidation/js/multifield.js}"></script>
+  <script type="text/javascript" th:src="@{/resources/FormValidation/js/validator.js}"></script>
+  
+  
+ <script type="text/javascript">
+		// initialize the validator function
+	
+	
+	validator.message['date'] = 'not a real date';
+    		
+    		
+    		$('form')
+    			.on('blur', 'input[required], input.optional, select.required', validator.checkField)
+    			.on('change', 'select.required', validator.checkField)
+    			.on('keypress', 'input[required][pattern]', validator.keypress);
+    			
+    		$('.multi.required')
+    			.on('keyup blur', 'input', function(){ 
+    				validator.checkField.apply( $(this).siblings().last()[0] );
+    			});
+    		
+    		// bind the validation to the form submit event
+    		//$('#send').click('submit');//.prop('disabled', true);
+    		
+    		$('form').submit(function(e){
+    			e.preventDefault();
+    			var submit = true;
+    			// evaluate the form using generic validaing
+    			if( !validator.checkAll( $(this) ) ){
+    				submit = false;
+    			}
+
+    			if( submit )
+    				this.submit();
+    			return false;
+    		});
+    		
+    		/* FOR DEMO ONLY */
+    		$('#vfields').change(function(){
+    			$('form').toggleClass('mode2');
+    		}).prop('checked',false);
+    		
+    		$('#alerts').change(function(){
+    			validator.defaults.alerts = (this.checked) ? false : true;
+    			if( this.checked )
+    				$('form .alert').remove();
+    		}).prop('checked',false);
+    	
+		
+	</script>   
+
+</body>
+</html>

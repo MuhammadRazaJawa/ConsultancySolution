@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+
+<script type="text/javascript" th:src="@{/resources/js/jquery.min.js}"> </script>
+<script type="text/javascript" th:src="@{/resources/js/jquery-2.0.3.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/myCustomJS.js}"></script>
+
+
+<script type="text/javascript" th:src="@{/resources/js/addPOSMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addLangMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addEduMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addWorkExpMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addRefMultiple.js}"></script>
+
+</head>
+
+<body>
+<form th:action="@{saveSearchCriteria}">
+
+	<input type="text" name="generalDetailId.generalDetailId" th:value="${id}" />
+	Country: <select name="country">
+	  <option value="pakistan">Pakistan</option>
+	  <option value="india">India</option>
+	  <option value="UK">United Kingdom</option>
+	  <option value="America">America</option>
+	</select>
+	<br />
+	City: <select name="City">
+	  <option value="LHR">Lahore</option>
+	  <option value="ISL">Islamabad</option>
+	  <option value="KHI">Karachi</option>
+	  <option value="sasas">Kuch b</option>
+	</select>
+	
+	<br />
+	Institute Type: <select name="institute">
+	  <option value="uni">University</option>
+	  <option value="col">College</option>
+	</select>
+	
+	<br />
+	Institute list: <select name="institute">
+	  <option value="LUMS">LUMS</option>
+	  <option value="NUST">NUST</option>
+  <option value="GCU">GCU</option>
+	  <option value="FAST">FAST</option>
+	</select>
+	<br />
+	Offered Programs List: <select name="programOffered">
+	  <option value="CS">Computer Science</option>
+	  <option value="MBA">MBA</option>
+	  <option value="NET">Networking</option>
+	  <option value="ACC">Accounting</option>
+	</select>
+
+	<input type="submit" value="Save Client" />
+</form>
+</body>
+</html>

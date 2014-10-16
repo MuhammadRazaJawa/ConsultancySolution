@@ -1,0 +1,649 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+
+<script type="text/javascript" th:src="@{/resources/js/jquery.min.js}"> </script>
+<script type="text/javascript" th:src="@{/resources/js/jquery-2.0.3.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/myCustomJS.js}"></script>
+
+
+<script type="text/javascript" th:src="@{/resources/js/addPOSMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addLangMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addEduMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addWorkExpMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addRefMultiple.js}"></script>
+
+</head>
+
+<body>
+
+<div th:if="${client != null}">
+	not null
+	
+		<form th:action="@{searchClient}">
+Search By:
+	<select name="attribute">
+		<option value="firstName">Name</option>
+		<option value="mobileNumber">Mobile Number</option>
+	  	<option value="email">Email Address</option>
+		<option value="nic">N.I.C</option>
+	</select>
+	
+	Search Value: <input type="text" name="keyword"/>
+
+	<input type="submit" value="search" />
+</form>
+	
+	<br/>
+<form th:action="@{getClientDetail}">
+
+	ID: <input type="text" id="" name="id" disabled="disabled" th:value="${client.generalDetailId}" /> <br/>
+	<input type="submit" value="search" />
+
+</form>	
+	First Name: <input type="text" disabled="disabled" th:value="${client.firstName}" /> <br/>
+	Father Name: <input type="text" disabled="disabled" th:value="${client.fatherName}" /> <br/>
+	Age: <input type="text" disabled="disabled" th:value="${client.age}" /> <br/>
+	City: <input type="text" disabled="disabled" th:value="${client.city}" /> <br/>
+	Mobile Number: <input type="text" disabled="disabled" th:value="${client.mobileNumber}" /> <br/>
+	Other Contact: <input type="text" disabled="disabled" th:value="${client.otherContact}" /> <br/>
+	First Language: <input type="text" disabled="disabled" th:value="${client.firstLanguage}" /> <br/>
+	Email Address: <input type="text" disabled="disabled" th:value="${client.email}" /> <br/>
+	N.I.C: <input type="text" disabled="disabled" th:value="${client.nic}" /> <br/>
+	Status: <input type="hidden" th:value="status" value="${client.inactive}" /> <br/>
+
+</div>
+<div th:if="${client == null}">
+is null
+	<form th:action="@{searchClient}">
+Search By:
+	<select name="attribute">
+		<option value="firstName">Name</option>
+		<option value="mobileNumber">Mobile Number</option>
+	  	<option value="email">Email Address</option>
+		<option value="nic">N.I.C</option>
+	</select>
+	
+	Search Value: <input type="text" name="keyword"/>
+
+	<input type="submit" value="search" />
+</form>
+	
+</div>
+
+<div id="menu">
+
+<h1> Registeration Form</h1>
+
+
+<button id="personalDetail"> Personal Details</button>
+<button id="generalDetail"> General Details</button> 
+<button id="posDetail"> Program Of Study</button> 
+<button id="languageDetail"> Language Details</button>
+<button id="educationalDetail"> Educational Details</button>
+<button id="workExperienceDetail"> Work Exp Details</button>
+<button id="personalStatementDetail"> Personal Statement</button>
+<button id="referencesDetail"> References</button>
+<button id="declarationDetail"> Declaration</button> 
+<button id="showAllDetail"> SHOW ALL</button> 
+<button id="cancelAllDetail"> CANCEL</button>       
+
+</div>
+
+
+<div id="pdDiv" align="center" style="display:none;">
+
+<h3> Personal Details </h3> 
+
+
+<form th:action="@{savePersonalDetail}">
+
+<label> Title: </label>
+<input type="text" name="generalDetailId.generalDetailId" th:value="${id}" />
+
+<input type="radio" name="sex" value="mr">Mr</input>
+<input type="radio" name="sex" value="ms">Ms</input>
+<input type="radio" name="sex" value="miss">Miss </input>
+<input type="radio" name="sex" value="mrs">Mrs </input> <br/>
+
+<label> Surname/Familay Name: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<label> First Name: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<label> Correspondence / Agent Address </label>
+<textarea rows="4" cols="50">
+
+</textarea> <br/>
+
+<label> Country </label>
+<select>
+  <option value="Pakistan">Pakistan</option>
+  <option value="India">India</option>
+  <option value="USA">U.S.A</option>
+  
+</select> <br/>
+
+<label> Postal Code: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<label> Telephone No: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<label> Cell No: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<label> Email: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<label> Home Address (if different) </label>
+<textarea rows="4" cols="50">
+
+</textarea> <br/>
+
+<label> Country </label>
+<select>
+  <option value="Pakistan">Pakistan</option>
+  <option value="India">India</option>
+  <option value="USA">U.S.A</option>
+  
+</select> <br/>
+
+<label> Postal Code: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+
+<label> SEX: </label>
+<input type="radio" name="yes" value=""> Male</input>
+<input type="radio" name="yes" value=""> Female</input> <br/>
+
+
+<label> Date of Birth: </label>
+<input type="text" name="" value=""> </input> <br/>
+
+<input type="submit" value="Submit"> </input>
+
+</form>
+
+<button id="cancelPD"> cancel</button> <br/>
+
+</div>
+
+<div th:if="${currentStudy != null}">
+
+<div id="gdDiv" align="center" style="display:none;">
+
+<h3> General Details  </h3> 
+
+<form th:action="@{saveCurrentStudies}">
+
+<h3> Current Studies (if any)</h3>
+
+<input type="hidden" name="generalDetailId.generalDetailId"
+ th:value="${currentStudy.generalDetailId.generalDetailId}" />
+<input type="hidden" th:name="currentStudy.currentStudyId"
+			 	th:value="${currentStudy.currentStudiesId}" /> <br/>
+
+<label> Program Title: </label>
+<input type="text" name="programTitle" th:value="${currentStudy.programTitle}"> </input> <br/>
+<label> University: </label>
+	<input type="text" name="university" th:value="${currentStudy.university}"> </input> <br/>
+<label> City: </label>
+<select name="city">
+	<option th:each="city : ${cityList}" th:selected="(${city.cityName} == ${currentStudy.city}) ? 'selected'" th:value="${city.cityId}" th:text="${city.cityName}" ></option>
+</select> <br/>
+
+<label> Country </label>
+<select name="country">
+  <option th:each="country : ${countryList}" th:selected="(${country.countryName} == ${currentStudy.country}) ? 'selected'" th:value="${country.countryId}" th:text="${country.countryName}" ></option>  
+</select> <br/>
+
+<label> Start Date: </label>
+<input type="text" name="startDate" th:value="${currentStudy.startDate}"> </input> <br/>
+
+
+<label> End Date: </label>
+<input type="text" name="endDate" th:value="${currentStudy.endDate}"> </input> <br/>
+
+<label> Highest Level of Qualification: </label>
+<input type="text" name="higherLevelOfQualification" th:value="${currentStudy.higherLevelOfQualification}"> </input> <br/>
+
+<label> Expected Date of Completion  </label>
+<input type="text" name="expectedDateOfCompletion" th:value="${currentStudy.expectedDateOfCompletion}"> </input> <br/>
+
+<label> Have you studied abroad before? </label>
+<input type="radio" name="haveStudiedAbroad" th:checked="${currentStudy.haveStudiedAbroad} == true ? 'checked'" value="1">yes</input>
+<input type="radio" name="haveStudiedAbroad" th:checked="${currentStudy.haveStudiedAbroad } == false ? 'checked'" value="0">no</input> <br/>
+
+	<input type="submit" value="submit"> </input>
+
+</form>
+
+
+<button id="cancelGD"> cancel</button> <br/>
+
+</div>
+
+</div>
+
+<div th:if="${currentStudy == null}" id="gdDiv" align="center" style="display:none;">
+
+<h3> General Details  </h3> 
+
+<form th:action="@{saveCurrentStudies}">
+
+<h3> Current Studies (if any)</h3>
+
+<input type="text" disabled="disabled" name="generalDetailId.generalDetailId" th:value="${id}" />
+<label> Program Title: </label>
+<input type="text" name="programTitle" value=""> </input> <br/>
+<label> University: </label>
+	<input type="text" name="university" value=""> </input> <br/>
+
+<label> City: </label>
+<select name="city">
+	<option th:each="city : ${cityList}" th:value="${city.cityId}" th:text="${city.cityName}" ></option>
+</select> <br/>
+
+<label> Country </label>
+<select name="country">
+	<option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>
+</select>
+
+
+ <br/>
+
+<label> Start Date: </label>
+<input type="text" name="startDate" value=""> </input> <br/>
+
+
+<label> End Date: </label>
+<input type="text" name="endDate" value=""> </input> <br/>
+
+<label> Highest Level of Qualification: </label>
+<input type="text" name="higherLevelOfQualification" value=""> </input> <br/>
+
+<label> Expected Date of Completion  </label>
+<input type="text" name="expectedDateOfCompletion" value=""> </input> <br/>
+
+<label> Have you studied abroad before? </label>
+<input type="radio" name="haveStudiedAbroad" value="yes">yes</input>
+<input type="radio" name="haveStudiedAbroad" value="no">no</input> <br/>
+
+	<input type="submit" value="submit"> </input>
+
+</form>
+
+<button id="cancelGD"> cancel</button> <br/>
+
+
+
+</div>
+
+
+
+<div id="posDiv" align="center" style="display:none;">
+
+<h3> Program Of Study  </h3> 
+
+
+
+<form th:action="@{/saveProgramOfStudy}" method="get" modelAttribute="programOfStudyList">
+	<div id="itemRowsPOS">
+
+	<div th:else="${#lists.isEmpty(programOfStudyList)}">
+		<div id="repeat" th:each="programOfStudy : ${programOfStudyList}">
+			<input type="hidden" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].generalDetailId.generalDetailId'" 
+	   		th:value="${programOfStudy.generalDetailId.generalDetailId}" />
+	
+		 	<input type="hidden" th:name="'referenceList[' +${programOfStudyStat.index}+ '].referenceId'"
+			 	th:value="${programOfStudy.programOfStudyId}" /> <br/>
+
+	   Awarding Body <input type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].awardingBody'" th:value="${programOfStudy.awardingBody}"  />
+
+	    Title of Course <input type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].titleOfCourse'" th:value="${programOfStudy.titleOfCourse}" />
+	
+	    Start Date <input type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].startDate'" th:value="${programOfStudy.startDate}"/> 
+	
+	   Year of Entry <input type="text" th:name="'programOfStudyList[' + ${programOfStudyStat.index} + '].yearOfEntry'" th:value="${programOfStudy.yearOfEntry}" />
+		</div>
+	</div>
+	
+		<div th:if="${#lists.isEmpty(programOfStudyList)}">
+			<input type="text" name="programOfStudyList[1].generalDetailId.generalDetailId" th:value="${id}" />
+		   Awarding Body <input type="text" name="programOfStudyList[1].awardingBody"  />
+		    Title of Course <input type="text" name="programOfStudyList[1].titleOfCourse" />
+		    Start Date <input type="text" name="programOfStudyList[1].startDate" /> 
+		   Year of Entry <input type="text" name="programOfStudyList[1].yearOfEntry" />
+   		</div>
+    
+<br/><br/><br/>
+    <input onClick="addRowPOS(this.form);" type="button" value="Add More" /> 
+	
+	<input type="submit" value="Submit"> </input>
+	
+	</div>
+	
+    
+	</form>
+
+<button id="cancelPOS"> cancel</button> <br/>
+
+</div>
+
+
+<div id="languageDiv" align="center" style="display:none;">
+
+<h2> Language Details </h2> 
+
+
+
+<form th:action="@{saveLanguageDetail}">
+ <h3>Enter the details of other Language(s) Test if any: </h3>
+	
+<div th:if="${#lists.isEmpty(languageList)}" id="itemRowsLang">
+    
+	<input type="text" name="languageList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	Test Name <input type="text" name="languageList[0].testName"  />
+    Test Score <input type="text" name="languageList[0].testScore" />
+    Validity Date <input type="text" name="languageList[0].validityDate" /> 
+
+    <input onClick="addRowLang(this.form);" type="button" value="Add More" />
+    <input type="submit" value="Submit"> </input>
+    
+</div>
+
+<div th:else="${#lists.isEmpty(languageList)}" id="itemRowsLang">
+    <div th:each="language : ${languageList}">
+    	 <input type="hidden" th:name="'language[' +languageStat.index+ '].generalDetailId.generalDetailId'"
+    	 th:value="${language.generalDetailId.generalDetailId}" />
+    	  	<input type="hidden" th:name="'languageList[' +${languageStat.index}+ '].referenceId'"
+			 	th:value="${language.languageDetailId}" /> <br/>
+    	Test Name <input type="text" th:name="'language[' +languageStat.index+ '].testName'"
+    	 th:value="${language.testName}" />
+    	Test Score <input type="text" th:name="'language[' +languageStat.index+ '].testScore'"
+    	 th:value="${language.testScore}" />
+    	Validity Date <input type="text" th:name="'language[' +languageStat.index+ '].validityDate'"
+    	 th:value="${language.validityDate}"/> 
+
+    <input onClick="addRowLang(this.form);" type="button" value="Add More" />
+    <input type="submit" value="Submit"> </input>
+    
+    </div>
+
+</div>
+
+
+</form>
+
+
+<button id="cancelLang"> cancel</button> <br/>
+
+
+</div>
+
+
+
+<div id="eduDiv" align="center" style="display:none;">
+
+<form th:action="@{saveEducationalDetail}" >
+<h3> Educational Details  </h3> 
+
+	<div th:else="${#lists.isEmpty(educationalDetailList)}" id="itemRows">
+	
+		<div th:each="educationalDetail : ${educationalDetailList}">
+			 <input type="hidden" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].generalDetailId.generalDetailId'"
+			 th:value="${educationalDetail.generalDetailId.generalDetailId}" />
+			  	<input type="hidden" th:name="'referenceList[' +${educationalDetailStat.index}+ '].referenceId'"
+			 	th:value="${educationalDetail.educationalDetailId}" /> <br/>
+			Uni/College/School Name  Address <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].instituteName'"
+			 th:value="${educationalDetail.instituteName}"  /> <br/>
+		   Degree/Dip/Cert/GNVQ/A-level : <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].degreeName'"
+		    th:value="${educationalDetail.degreeName}" /><br/>
+		   Subject: <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].subject'"
+		    th:value="${educationalDetail.subject}" /><br/>
+		   Grade Awarded: <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].gradeAwarded'"
+		    th:value="${educationalDetail.gradeAwarded}" /><br/>
+		   Date Awarded: <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].dateAwarded'"
+		    th:value="${educationalDetail.dateAwarded}" /> <br/>
+		  
+		   <input onClick="addRow(this.form);" type="button" value="Add More" /> 
+		
+		<input type="submit" value="Submit"> </input>
+				
+		
+		</div>
+	
+	</div>
+
+	<div th:if="${#lists.isEmpty(educationalDetailList)}" id="itemRows">
+	
+	<input type="text" name="educationalDetailList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	Uni/College/School Name  Address <input type="text" name="educationalDetailList[0].instituteName"  /> <br/>
+    Degree/Dip/Cert/GNVQ/A-level : <input type="text" name="educationalDetailList[0].degreeName" /><br/>
+    Subject: <input type="text" name="educationalDetailList[0].subject" /><br/>
+    Grade Awarded: <input type="text" name="educationalDetailList[0].gradeAwarded" /><br/>
+    Date Awarded: <input type="text" name="educationalDetailList[0].dateAwarded" /> <br/>
+    
+   
+    <input onClick="addRow(this.form);" type="button" value="Add More" /> 
+	
+	<input type="submit" value="Submit"> </input>
+	
+	</div>
+	
+    
+	</form>
+
+<button id="cancelEDU"> cancel</button> <br/>
+
+</div>
+
+
+<div id="workExpDiv" align="center" style="display:none;">
+
+<h3> Work Experience Details  </h3> 
+
+
+
+<form th:action="@{saveWorkExperience}" method="get">
+
+	<div th:else="${#lists.isEmpty(workExperienceList)}" id="itemRowsWorkExp">
+		<div th:each="workExperience : ${workExperienceList}">
+		not null
+			 <input type="hidden" th:name="'workExperienceList[' +workExperienceStat.index+ '].generalDetailId.generalDetailId'"
+			 th:value="${workExperience.generalDetailId.generalDetailId}" />
+			  	<input type="hidden" th:name="'referenceList[' +${workExperienceStat.index}+ '].referenceId'"
+			 	th:value="${workExperience.workExperienceId}" /> <br/>
+		    Organization: <input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].organization'"
+		     th:value="${workExperience.organization}" />
+		    Designation: <input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].designation'"
+		     th:value="${workExperience.designation}" />
+		    Duties/Responsibilites: <input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].duties'"
+		     th:value="${workExperience.duties}" /> 
+			Date:(From) <input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].startDate'"
+			 th:value="${workExperience.startDate}" />
+		    Date:(To) <input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].endDate'"
+		     th:value="${workExperience.endDate}" />
+
+		    <input onClick="addRowWorkExp(this.form);" type="button" value="Add More" /> 
+			<input type="submit" value="Submit"> </input>
+		</div>
+	</div>
+	
+	<div th:if="${#lists.isEmpty(workExperienceList)}" id="itemRowsWorkExp">
+	is null
+		<input type="text" name="workExperienceList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	    Organization: <input type="text" name="workExperienceList[0].organization" />
+	     Designation: <input type="text" name="workExperienceList[0].designation" />
+	    Duties/Responsibilites: <input type="text" name="workExperienceList[0].duties" /> 
+		Date:(From) <input type="text" name="workExperienceList[0].startDate"  />
+	    Date:(To) <input type="text" name="workExperienceList[0].endDate" />
+	    
+	   
+	    <input onClick="addRowWorkExp(this.form);" type="button" value="Add More" /> 
+		<input type="submit" value="Submit"> </input>
+	</div>
+	
+    
+	</form>
+
+<button id="cancelworkEXP"> cancel</button> <br/>
+
+
+
+</div>
+
+<div id="psDiv" align="center" style="display:none;">
+
+<h3> Personal Statement </h3> 
+<form th:action="@{savePersonalDetail}">
+	
+	<div th:if="${personalStatement == null}">
+		<input type="text" name="generalDetailId.generalDetailId" th:value="${id}" />
+		<!-- <textarea type="text" name="personalStatement" maxlength="1050">
+		Enter text here...</textarea> <br/> -->
+		<input type="text" name="personalStatement" />
+		
+		<input  type="submit" value="Save" />
+		<button id="cancelPS"> cancel</button> <br/>
+	</div>
+	
+	<div th:if="${personalStatement != null}">
+		<input type="text" th:name="${personalStatement.generalDetailId.generalDetailId}" th:value="${id}" />
+		<input type="text" disabled="disabled" name="personalStatementId" th:value="${personalStatement.personalStatementId}" />
+		<!-- <textarea rows="4" cols="50" name="personalStatement" th:value="${personalStatement.personalStatement}" maxlength="1050">
+		Enter text here...</textarea> <br/> -->
+		
+		<input type="text" name="personalStatement" th:value="${personalStatement.personalStatement}" />
+		
+		<input  type="submit" value="Save" />
+		<button id="cancelPS"> cancel</button> <br/>
+	</div>
+
+</form>
+</div>
+
+<div id="refDiv" align="center" style="display:none;">
+
+<h3> References </h3> 
+
+<form th:action="@{saveReference}" method="get">
+
+	<div th:if="${#lists.isEmpty(referenceList)}" id="itemRowsREF">
+
+	<input type="text" name="referenceList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	Name <input type="text" name="referenceList[0].name"  />
+    Designation <input type="text" name="referenceList[0].designation" />
+    Relationship <input type="text" name="referenceList[0].relationship" />
+   	Address: <input type="text" name="referenceList[0].address" /> <br/>
+   	Contact (M) <input type="text" name="referenceList[0].mobileContact" />
+   	Contact (H): <input type="text" name="referenceList[0].otherContact" />
+   	FAX: <input type="text" name="referenceList[0].fax" /> 
+    Email: <input type="text" name="referenceList[0].email" /> 
+     Years known: <input type="text" name="referenceList[0].yearsKnown" /> 
+    
+   
+    <input onClick="addRowREF(this.form);" type="button" value="Add More" /> 
+	<input type="submit" value="Submit"> </input>
+	
+	
+	</div>
+	
+	<div th:else="${#lists.isEmpty(referenceList)}" id="itemRowsREF">
+		<div th:each="reference : ${referenceList}">
+			 <input type="hidden" th:name="'referenceList[' +${referenceStat.index}+ '].generalDetailId.generalDetailId'"
+			 	th:value="${id}" /> <br/>
+			 	<input type="hidden" th:name="'referenceList[' +${referenceStat.index}+ '].referenceId'"
+			 	th:value="${reference.referenceId}" /> <br/>
+			Name <input type="text" th:name="'referenceList[' +${referenceStat.index}+ '].name'"
+				th:value="${reference.name}" />
+		    Designation <input type="text" th:name="'referenceList[' +${referenceStat.index}+ '].designation'"
+		    	th:value="${reference.designation}" />
+		    Relationship <input type="text" th:name="'referenceList[' +${referenceStat.index}+ '].relationship'"
+		    	th:value="${reference.relationship}" />
+		   	Address: <input type="text" th:name="'referenceList[' +${referenceStat.index}+ '].address'"
+		   		th:value="${reference.address}" /> <br/>
+		   	Contact (M) <input type="text" th:name="'referenceList[' +${referenceStat.index}+ '].mobileContact'"
+		   		th:value="${reference.mobileContact}" /> <br/>
+		   	Contact (H): <input type="text" th:name="'referenceList[' +${referenceStat.index}+ '].otherContact'"
+		   		th:value="${reference.otherContact}" /> <br/>
+		   	FAX: <input type="text" name="'referenceList[' +${referenceStat.index}+ '].fax'"
+		   		th:value="${reference.fax}" /> <br/>
+		    Email: <input type="text" name="'referenceList[' +${referenceStat.index}+ '].email'"
+		    	th:value="${reference.email}" /> <br/>
+		    Years known: <input type="text" name="'referenceList[' +${referenceStat.index}+ '].yearsKnown'"
+		    	th:value="${reference.yearsKnown}" /> <br/>
+		    
+		    <input onClick="addRowREF(this.form);" type="button" value="Add More" /> 
+			<input type="submit" value="Submit"> </input>
+		</div>
+	</div>
+
+	</form>
+
+<button id="cancelREF"> cancel</button> <br/>
+
+</div>
+
+<div id="declareDiv" align="center" style="display:none;">
+
+<h3> Declaration </h3> 
+
+<form>
+
+<label> Please indicate how you heard about the course you have applied for. </label>
+
+<input type="text" name="generalDetailId.generalDetailId" th:value="${id}" />
+
+<input type="radio" name="hear" value="yes"> Family</input>
+<input type="radio" name="hear" value="no"> Friend</input> 
+<input type="radio" name="hear" value="yes"> Innternet</input>
+<input type="radio" name="hear" value="no"> Exibition</input> 
+<input type="radio" name="hear" value="yes"> Open Day</input>
+<input type="radio" name="hear" value="no">  Agent</input> 
+
+<p>Other (please specify)</p><input type="text" name="hear" value=""></input> 
+
+
+
+	<p>Under the Data Protection Act 1998.......................</p> <br/>
+    <p> I  <input type="text" name="" value="" > </input> <br/> S/O <input type="text" name="" value="" > <br/></input> Holder of <input type="text" name="" value="" ><br/> </input>  Pakistani Passport number<input type="text" name="" value="" > <br/></input>resident of <input type="text" name="" value="" > </input> <br/>
+     Pakistan do hereby declare on solemn affirmation as under: <br/>
+1.      That I am the deponent of this affidavit and am well conversant with the facts citied herein.<br/>
+2.      That all the documents, which I submitted on my behalf, are true and correct.<br/>
+3.      That I am not involved in any political or religious affairs nor am I connected with any criminal group activity. Moreover, I do not belong  any terrorist organization.<br/>
+4.      That I have never been convicted by any court of law, Police department or any other Government department in Pakistan Police report attached.<br/>
+5.      That I am going to <input type="text" name="" value="" > </input> for higher studies.<br/>
+6.      That I have applied for study permit in <input type="text" name="" value="" > </input><br/>
+7.      That as per policy of <input type="text" name="" value="" > </input> high commission I have the required funds for my study in <input type="text" name="" value="" > </input>.<br/>
+8.      That I will be regular in classes and will not join any subversive activities in <input type="text" name="" value="" > </input><br/>
+9.      That I will obey the Rules and Regulations in<input type="text" name="" value="" > </input><br/>
+10.  That I will have good behavior with all my classmates.<br/>
+11.     I shall be liable to pay all the consultation fee to my consultant by all means i.e Amount in Rs:<input type="text" name="" value="" > </input><br/>
+ 
+                    That whatever stated above is true to the best of my knowledge and belief and nothing has been concealed.
+</p>
+    
+    
+    
+    Appicants Signature:<input type="text" name="signature" ></input> <br/>
+    Appicants NIC:<input type="text" name="nic" ></input> <br/>
+    Date: <input type="text" name="signature" ></input> <br/>
+    
+    <input type="submit" value="Submit"> </input>
+
+
+</form>
+
+<button id="cancelDEC"> cancel</button> <br/>
+
+
+</div>
+
+
+</body>
+</html>

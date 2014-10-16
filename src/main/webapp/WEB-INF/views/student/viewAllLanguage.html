@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:if="${allLanguageList != null}">
+	<table border="1">
+		<tr th:each="language : ${allLanguageList}">
+			<td th:text="${language.languageDetailId}"></td>
+			<td th:text="${language.testName}"></td>
+			<td th:text="${language.testScore}"></td>
+			<td th:text="${language.validityDate}"></td>
+			<!-- <td th:text="${language.generalDetailId.generalDetailId}"></td> -->
+			<td>
+				<a th:href="@{'getClientDetail?id=' + ${language.generalDetailId.generalDetailId}}">Edit</a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div th:if="${allLanguageList == null}">
+	<table border="1">
+		<tr>
+ 			<td><h1>No Data Found</h1></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

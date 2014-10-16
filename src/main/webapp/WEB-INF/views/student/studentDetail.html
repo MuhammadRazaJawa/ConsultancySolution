@@ -1,0 +1,2922 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+
+	 <link  rel="stylesheet" type="text/css" th:href="@{/resources/FormValidation/css/fv.css}" /> 
+
+	 <!-- ===================== Dashboard Interface ================================ -->
+	
+	<link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/reset.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/style.css}" />
+    <link rel="stylesheet"  type="text/css"  th:href="@{/resources/Interface/js/jquery.wysiwyg.css}" />
+    <link rel="stylesheet"  type="text/css" media="screen"  th:href="@{/resources/Interface/js/colorbox.css}" />
+    <link  rel="stylesheet" type="text/css" media="screen" th:href="@{/resources/Interface/js/colorbox-custom.css}" />
+    
+    <!-- ======================== Custom CSS =========================================== -->
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/myCustom.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/customCSS/tags.css}" />    
+    
+
+
+ <script type="text/javascript" th:src="@{/resources/js/jquery.min.js}"> </script>
+<script type="text/javascript" th:src="@{/resources/js/jquery-2.0.3.js}"></script>
+ <script type="text/javascript" th:src="@{/resources/js/myCustomJS.js}"></script> <!-- All Student Portal Buttons Working Aniaa Janiaa -->
+<script type="text/javascript" th:src="@{/resources/js/selectOption.js}"></script> <!-- All Client Buttons Working Aniaa Janiaa -->
+
+<!-- ========================  Add Multiple Fields =========================================== -->
+
+<script type="text/javascript" th:src="@{/resources/js/addPOSMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addLangMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addEduMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addWorkExpMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addRefMultiple.js}"></script>
+
+<!-- ========================   Custom Validation =========================================== -->
+
+ 	 <script type="text/javascript" th:src="@{/resources/Interface/Validation/clientFormValidation.js}"></script> <!-- Empty Checks & Alerts -->
+
+
+	 
+ <!-- ========================  Dashboard Interface =========================================== -->	 
+	 
+     <script type="text/javascript" th:src="@{/resources/Interface/js/jquery-1.3.2.min.js}"></script> 
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.colorbox-min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.ui.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.corners.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/bg.pos.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.wysiwyg.js}"></script>    
+    <script type="text/javascript" th:src="@{/resources/Interface/js/tabs.pack.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/cleanity.js}"></script> 
+    
+    
+    <script type="text/javascript">
+    
+    	function changeDTP(value){
+    		//alert("Start");
+    		//alert("id: " + value.id);
+ 	
+    			var toChange = '#changeDateToPresent'+ value.id;
+				
+    			//alert(toChange);
+    			
+    			$(toChange).attr('type','text');
+    			$(toChange).attr('value','present');
+    			//alert(s);
+    			
+    			
+    			//alert("changeDateToPresent: " + document.getElementById(toChange).type);
+    			
+    			//alert("changeDateToPresent: " + document.getElementById(toChange).type);
+				
+    			//document.getElementById(toChange).type = 'text';
+    			//document.getElementById("changeDateToPresent['+  +']").value = 'present';	
+    		
+    	}
+    	
+    	
+    	function changePTD(value){
+    		//alert("End ho gaya hai bhai");
+    		//alert("id: " + value.id);
+ 	
+    			var toChange = '#changeDateToPresent'+ value.id;
+				
+    			//alert(toChange);
+    			
+    			$(toChange).attr('type','date');
+    	
+    		
+    	}
+    	
+    	
+    	
+    </script>
+    
+    
+</head>
+
+<body>
+
+<div id="container">
+ 
+    <div id="header">
+      <div id="top">
+      <h1><a href="#">CSS</a></h1>
+      <p id="userbox">Hello <strong>Muhammad Raza</strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp;<a href="#">Logout</a> <br />
+      <small>Last Login: 12 May 2009</small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li class="selected"><a th:href="@{/consultancy/goToHome}">Dashboard</a></li>
+        <li><a class="top-level" href="#">Users <span>&nbsp;</span></a>
+          <ul>
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Edit Users</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a class="top-level" href="#">Settings <span>&nbsp;</span></a>
+            <ul>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">File Paths</a></li>
+            <li><a href="#">User Profiles</a></li>
+          </ul></li>
+      </ul>
+	
+      <span class="clearFix">&nbsp;</span>
+    </div><!-- end of #header -->
+
+<div id="content">
+	<div id="content-top">
+    <h2>Dashboard</h2>
+     
+      <span class="clearFix">&nbsp;</span>
+      </div><!-- end of div#content-top -->
+      
+      
+      
+      <div id="left-col">
+      
+      
+
+          <div class="box">
+              <h4 class="yellow">Registration</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone -->
+              <ul class="list-links">
+              	
+               <!--  <li><a href="#"><button id="searchCriteriaDetail"> Search Criteria</button></a></li> -->
+              
+                  <li><a href="#"><button id="personalDetail"> Personal Details</button></a></li>
+                  <li><a href="#"><button id="generalDetail"> Latest Qualification</button> </a></li>
+                  <li><a href="#"><button id="posDetail"> Program Of Study</button> </a></li>
+                  <li><a href="#"><button id="languageDetail"> Language Details</button></a></li>
+                  <li><a href="#"><button id="educationalDetail"> Educational Details</button></a></li>
+                  <li><a href="#"><button id="workExperienceDetail"> Work Exp Details</button></a></li>
+                  <li><a href="#"><button id="personalStatementDetail"> Personal Statement</button></a></li>
+                  <li><a href="#"><button id="referencesDetail"> References</button></a></li>
+                 <!-- <li><a href="#"></a>
+                  		<ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        </ul>
+                  </li>-->
+                  <li><a href="#"><button id="declarationDetail"> Declaration</button> </a></li>
+                  <li><a href="#"><button id="showAllDetail"> Show All</button> </a></li>
+                  <li><a href="#"><button id="cancelAllDetail"> Cancel</button> </a></li>
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
+          
+          
+           <div class="box">
+              <h4 class="yellow">STUDENT VIEWS</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone -->
+              <ul class="">
+              
+              	   <li><a th:href="@{/consultancy/viewTestVal}"> <button class="hiddenBtn" type="button">Test Validation</button> </a></li>
+                   <li><a th:href="@{/consultancy/viewAllClient}"> <button class="hiddenBtn" type="button">View All Students</button> </a></li>
+                   <li><a th:href="@{/consultancy/viewAllPersonalDetail}"> <button class="hiddenBtn" type="button">View Personal Details</button> </a></li>
+                   <li><a th:href="@{/consultancy/viewAllCurrentStudies}"> <button class="hiddenBtn" type="button">View Latest Qualification</button> </a></li>
+                   <li><a th:href="@{/consultancy/viewAllProgramOfStudy}"> <button class="hiddenBtn" type="button">View POS Details</button> </a></li>
+                    <li><a th:href="@{/consultancy/viewAllLanguage}"> <button class="hiddenBtn" type="button">View Language Details</button> </a></li>      
+                   <li><a th:href="@{/consultancy/viewAllEducationalDetail}"> <button class="hiddenBtn" type="button">View Education Details</button> </a></li>
+                   <li><a th:href="@{/consultancy/viewAllWorkExperience}"> <button class="hiddenBtn" type="button">View All Work-Experience</button> </a></li>
+				   <li><a th:href="@{/consultancy/viewAllReference}"> <button class="hiddenBtn" type="button">View All References</button> </a></li>
+                   <li><a th:href="@{/consultancy/viewAllPersonalStatement}"> <button class="hiddenBtn" type="button">View Personal Statement</button> </a></li>
+      
+                  <li><a th:href="@{/consultancy/viewAllClientTwo}"> <button class="hiddenBtn" type="button">View Students DT</button> </a></li>
+                  <!--   <li><a href="#"> View Personal Detail </a></li>
+                 
+                  <li><a href="#"> View Current Study </a></li>
+                  <li><a href="#"> View Program Of Study </a></li> -->
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
+
+
+    
+      <img style="margin-left:30px;"  th:src="@{/resources/Interface/icons/logo.png}" width="160px" height="150px" />
+ 
+          
+  
+          
+          
+      </div> <!-- end of div#left-col -->
+      
+      
+      
+       <div id="mid-col" class="full-col">
+      	
+   	  <div class="box">
+      		<h4 class="white">Search Result</h4>
+        <div class="box-container">   
+        
+        
+       <div th:if="${client != null}">
+ <!-- not null not null  not null not null not null not null not null not null   -->	
+	
+		<form th:action="@{/consultancy/searchClient}">
+<!-- <h1>Search By:</h1> -->
+<br/> <br/>
+	<select name="attribute">
+		<option value="firstName">Name</option>
+		<option value="mobileNumber">Mobile Number</option>
+	  	<option value="email">Email Address</option>
+		<option value="nic">N.I.C</option>
+	</select>
+
+<h1>Search By:</h1>	
+	 <input type="text" name="keyword"/>
+
+	<input type="submit" value="search" />
+</form>
+	
+	<br/>
+<form th:action="@{/consultancy/getClientDetail}">
+
+	<!-- IS KO Nikal Na don ????? -->
+
+	<!-- ID: <input type="text" id="" name="id" disabled="disabled" th:value="${client.generalDetailId}" /> <br/>
+	
+	<input type="submit" value="search" /> -->
+	
+
+</form>
+
+	<div id="firstSeachResult">
+	
+		 <table>
+		 
+		 	<tr>
+				<td>
+    				<label class="labelClass"> First Name:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.firstName}" />
+   			   </td>    
+   			   
+   			  <td>
+    				<label class="labelClass">Email Address:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled"  th:value="${client.email}" />
+   			   </td>    
+   			   
+			</tr>
+			
+			<!--  <tr>
+				<td>
+    				<label class="labelClass"> Father Name:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.fatherName}" />
+   			   </td>    
+			</tr> 
+			
+			 <tr>
+				<td>
+    				<label class="labelClass"> Age:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.age}" />
+   			   </td>    
+			</tr>
+			
+				
+			<tr>
+				<td>
+    				<label class="labelClass"> City:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.city}" />
+   			   </td>    
+			</tr> 
+			
+			<tr>
+				<td>
+    				<label class="labelClass"> Mobile Number:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.mobileNumber}" />
+   			   </td>    
+			</tr> -->
+			
+		</table>
+	</div>
+	
+	<!-- <div id="secondSeachResult"> 
+	
+	<table>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">Other Contact:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text"  th:value="${client.otherContact}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">First Language:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text"  th:value="${client.firstLanguage}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">Email Address:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text"  th:value="${client.email}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">N.I.C:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text"  th:value="${client.nic}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">Status:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="hidden" th:value="status" value="${client.inactive}" />
+   			   </td>    
+			</tr>
+		 	
+		 
+		 </table>
+		 
+		 <br/>
+		
+	
+	</div>
+	 -->
+	
+
+
+</div>
+<div th:if="${client == null}">
+<!--is null is null is null is null is null is null is null is null is null is null is null is null is null is null is null is null is null  -->
+	<form th:action="@{/consultancy/searchClient}">
+	
+<h1>Search By:</h1>
+<br/> <br/>
+	<select name="attribute">
+		<option value="firstName">Name</option>
+		<option value="mobileNumber">Mobile Number</option>
+	  	<option value="email">Email Address</option>
+		<option value="nic">N.I.C</option>
+	</select>
+	
+<h1>Search Value:</h1> 
+	<input type="text" name="keyword"/>
+
+	<input type="submit" value="search" />
+</form>
+	
+</div>
+       
+        
+        
+        </div>
+        </div>  	
+        	
+        			
+</div> <!-- end of MID COL div.box -->
+      
+      <div id="mid-col" class="full-col"><!-- end of div.box -->
+      	
+   	  <div class="box">
+      		<h4 class="white">Forms</h4>
+        <div class="box-container">     	
+        	
+      	
+      <div id="pdDiv" align="center" style="display:none;">
+
+<h1> Personal Details </h1> <br/>
+
+
+<form th:action="@{/consultancy/savePersonalDetail}" novalidate="">
+
+
+<input class="inputClass" type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" /> <br/>
+
+<div id="first" style="float: left;"> 
+
+		<div class="item">
+						<label>
+							<span>Title:</span>
+							<select class="required" name="dropdown">
+								<option value="">-- none --</option>
+								<option value="Mr">Mr</option>
+								<option value="Ms">Ms</option>
+								<option value="Miss">Miss</option>
+								<option value="Mrs">Mrs</option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select Your Sex.</p>
+							</div>
+						</div>
+	</div>
+
+		
+			<div class="item">
+						<label>
+							<span>Surname:</span>
+							
+							<input   type="text" name="familyName" placeholder="e.g Raza"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Surname here</p>
+							</div>
+						</div>    
+				</div>
+
+			<div class="item">
+						<label>
+							<span>Given Name:</span>
+							
+							<input  type="text" name="firstName"  placeholder="e.g Muhammad"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your First Name here</p>
+							</div>
+						</div>    
+				</div>
+
+
+				<div class="item">
+						<label>
+							<span>Agent Address:</span>
+							
+							<input   type="text" name="agentAddress"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter your Agent Agent here</p>
+							</div>
+						</div>    
+				</div>
+
+	<div class="item">
+						<label>
+							<span>Agent Country:</span>
+							<select class="required" name="country">
+								<option value="">-- none --</option>
+								  <option value="Pakistan">Pakistan</option>
+  								  <option value="India">India</option>
+  					  			 <option value="USA">U.S.A</option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select Your Country.</p>
+							</div>
+						</div>
+	</div>
+
+			<div class="item">
+						<label>
+							<span>Postal Code:</span>
+							<input type="number" class='number' name="postalCode"  required='required'/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Postal Code Must be Number</p>
+							</div>
+						</div>
+			</div>
+
+	<div class="item">
+						<label>
+							<span> Telephone No:</span>
+							<input type="tel" class='tel' name="telephoneNo"  required='required' data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+	</div>
+
+	<div class="item">
+						<label>
+							<span> Cell No:</span>
+							<input type="tel" class='tel' name="cellNo"  required='required' data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+	</div>
+
+	<div class="item">
+						<label>
+							<span>email</span>
+							<input class='email' name="email"  required='required' type="email" />
+						</label>
+						
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Email here. </p>
+							</div>
+						</div>
+						
+	</div>
+
+	
+
+	<div class="item">
+						<label>
+							<span>Home Address:</span>
+							
+							<input   type="text" name="homeAddress"   required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your First Name here</p>
+							</div>
+						</div>    
+				</div>
+
+
+	<div class="item">
+						<label>
+							<span>Student Country:</span>
+							<select class="required" name="country">
+  					  			 <option value="0">Select Country</option>
+  					  			 <!-- th:selected="(${country.countryName} == ${currentStudy.country}) ? 'selected'" -->
+  					<option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>   
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select Student's Country.</p>
+							</div>
+						</div>
+	</div>
+
+	<div class="item">
+						<label>
+							<span>Student Postal Code:</span>
+							<input type="number" class='number' name="studentPostalCode"   required='required'/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Postal Code Must be Number</p>
+							</div>
+						</div>
+			</div>
+
+
+			<div class="item">
+						<label>
+							<span>Date of Birth:</span>
+							
+							<input  type="date" name="dOB"  required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Student's Date of Birth here.</p>
+							</div>
+						</div>    
+				</div>	
+				<br/>
+		<div class="item multi required">
+						<label for='multi_first'>
+							<span>Passport No</span>
+						</label>
+						<div class='input'>
+							<input type="text" name="multi1" maxlength='4' id='multi_first'/>
+							<input type="text" name="multi2" maxlength='10'/>
+							<input data-validate-length-range="15" data-validate-pattern="alphanumeric" id="serial" name="nic" type="hidden" required='required' />
+						</div>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Passport Number Here !</p>
+							</div>
+						</div>
+		</div>
+
+</div> <!-- End of 1st Div -->
+		
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+
+		<!-- <input id="saveBtn" type="submit" value="Submit"> </input> -->
+		 <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		
+</form>
+
+ <button class="saveBtn" id="cancelPD" > <img th:src="@{/resources/Interface/icons/close3.png}" /></button> <br/><br/><br/><br/><br/><br/>
+	
+
+</div>
+
+
+<div th:if="${currentStudy != null}">
+      
+        
+
+
+<div id="gdDiv" align="center" style="display:none;">
+
+<h1> Latest Qualification </h1> 
+<br/><br/><br/>
+<form th:action="@{/consultancy/saveCurrentStudies}" novalidate="">
+
+<!-- <br/>
+<h3> Current Studies (if any)</h3> -->
+<!-- 
+<input type="hidden" name="generalDetailId.generalDetailId"
+ th:value="${currentStudy.generalDetailId.generalDetailId}" />
+  -->
+  <input type="hidden" name="generalDetailId.generalDetailId"
+ th:value="${id}" />
+<input  type="hidden" name="currentStudyId"
+			 	th:value="${currentStudy.currentStudiesId}" /> <br/>
+			 	
+
+<div id="first" style="float: left;"> 
+
+
+		<div class="item">
+						<label>
+							<span>Program Title: </span>
+							
+							<input  type="text" name="programTitle" th:value="${currentStudy.programTitle}"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Program of Title here.</p>
+							</div>
+						</div>    
+		</div>
+
+
+	<div class="item">
+						<label>
+							<span> College/Institute/University: </span>
+							
+							<input  type="text" name="university" th:value="${currentStudy.university}"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your College/Istitute/University where you study ?</p>
+							</div>
+						</div>    
+	</div>
+
+
+<div class="item">
+						<label>
+							<span>City:</span>
+							<select class="required" name="city" id="city">
+  					  			 <option value="">Select City</option>
+								<option th:each="city : ${cityList}"  th:value="${city.cityId}" th:text="${city.cityName}" ></option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select City.</p>
+							</div>
+						</div>
+	</div>
+
+	<div class="item">
+						<label>
+							<span>Country:</span>
+							<select class="required" name="country">
+  					  			 <option value="">Select Country</option>
+  					<option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>   
+  
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select Country.</p>
+							</div>
+						</div>
+	</div>
+
+
+	<div class="item">
+						<label>
+							<span>Start Date:</span>
+							
+							<input  type="date" name="startDate" th:value="${currentStudy.startDate}"  required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Start Date.</p>
+							</div>
+						</div>    
+	</div>
+
+
+		<div class="item">
+						<label>
+							<span>End Date:</span>
+							
+							<input  type="date" name="endDate" th:value="${currentStudy.endDate}" required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter End Date here.</p>
+							</div>
+						</div>    
+				</div>
+
+
+			<div class="item">
+						<label>
+							<span>Highest Level of Qualification: </span>
+							
+							<input  type="text" name="higherLevelOfQualification" th:value="${currentStudy.higherLevelOfQualification}"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Highest Level of Qualification. e.g MS(CS) or Ph.D (CS) e.t.c</p>
+							</div>
+						</div>    
+				</div>
+
+
+	<div class="item">
+						<label>
+							<span>Expected Date of Completion  </span>
+							
+							<input  type="date" name="expectedDateOfCompletion" th:value="${currentStudy.expectedDateOfCompletion}" required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Expected Date of Completion here.</p>
+							</div>
+						</div>    
+	</div>
+
+
+	<div class="item">
+						<label>
+							<span>Have you studied abroad before? </span>
+							<select class="required" name="haveStudiedAbroad">
+								<option value="">-- none --</option>
+								<option value="o1">Yes</option>
+								<option value="o2">No</option>
+								
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Chose Yes/No Either you have studied abroad before or Not ?</p>
+							</div>
+						</div>
+	</div>
+ 
+</div> <!-- End of 1st Div -->
+
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+
+	<!-- <input type="submit" value="submit"> </input> -->
+	<button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+
+</form>
+
+
+	<button class="saveBtn" id="cancelGD"> <img th:src="@{/resources/Interface/icons/close3.png}"/> </button> <br/> 
+
+</div>
+
+</div>
+<div th:if="${currentStudy == null}" id="gdDiv" align="center" style="display:none;">
+
+<h1> Latest Qualification </h1> 
+
+<br/><br/><br/>
+
+<form th:action="@{/consultancy/saveCurrentStudies}" novalidate="">
+
+<!-- <br/>
+<h3> Current Studies (if any)</h3> -->
+
+<input type="hidden"  name="generalDetailId.generalDetailId" th:value="${id}" /> <!-- HIDDEN FIELD -->
+
+
+<div id="first" style="float: left;"> 
+
+
+
+	<div class="item">
+						<label>
+							<span>Program Title: </span>
+							
+							<input  type="text" name="programTitle" value=""  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Program of Title here.</p>
+							</div>
+						</div>    
+		</div>
+
+
+	<div class="item">
+						<label>
+							<span> College/Institute/University: </span>
+							
+							<input  type="text" name="university" value=""  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your College/Istitute/University where you study ?</p>
+							</div>
+						</div>    
+	</div>
+
+	<div class="item">
+						<label>
+							<span>City:</span>
+							<select class="required" name="city" id="city">
+  					  			 <option value="">Select City</option>
+								<option th:each="city : ${cityList}"  th:value="${city.cityId}" th:text="${city.cityName}" ></option>
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select City.</p>
+							</div>
+						</div>
+	</div>
+
+	<div class="item">
+						<label>
+							<span>Country:</span>
+							<select class="required" id="country" name="country" onChange="getCity()">
+  					  			 <option value="0">Select Country</option>
+  					<option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>   
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select Country.</p>
+							</div>
+						</div>
+	</div>
+
+
+
+	<div class="item">
+						<label>
+							<span>Start Date:</span>
+							
+							<input  type="date" name="startDate" value=""  required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Start Date.</p>
+							</div>
+						</div>    
+	</div>
+	<br/>
+
+
+		<div class="item">
+						<label>
+							<span>End Date:</span>
+							
+							<input  type="date" name="endDate" value="" required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter End Date here.</p>
+							</div>
+						</div>    
+		</div>
+	<br/>
+
+	<div class="item">
+						<label>
+							<span>Highest Level of Qualification: </span>
+							
+							<input  type="text" name="higherLevelOfQualification" value=""  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Highest Level of Qualification. e.g MS(CS) or Ph.D (CS) e.t.c</p>
+							</div>
+						</div>    
+	</div>
+
+
+	<div class="item">
+						<label>
+							<span>Expected Date of Completion  </span>
+							
+							<input  type="date" name="expectedDateOfCompletion" value="" required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter End Date here.</p>
+							</div>
+						</div>    
+	</div>
+
+	<div class="item">
+						<label>
+							<span>Have you studied abroad before? </span>
+							<select class="required" name="haveStudiedAbroad">
+								<option value="">-- none --</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+								
+							</select>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Chose Yes/No Either you have studied abroad before or Not ?</p>
+							</div>
+						</div>
+	</div>
+
+</div> <!-- End of 1st Div -->
+
+		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+
+	<!-- <input type="submit" value="submit"> </input> -->
+	<button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+
+</form>
+
+<button class="saveBtn" id="cancelGD"> <img th:src="@{/resources/Interface/icons/close3.png}"/> </button> <br/><br/><br/><br/>
+
+
+
+</div>
+        	
+         
+
+
+<div id="posDiv" align="center" style="display:none;">
+
+<h1> Program Of Study  </h1> 
+
+<br/><br/><br/>
+
+<form th:action="@{/consultancy/saveProgramOfStudy}" method="get" modelAttribute="programOfStudyList" novalidate="">
+	<div id="itemRowsPOS">
+	
+	<div th:if="${#lists.isEmpty(programOfStudyList)}">
+			<input id="idPOS" type="hidden" name="programOfStudyList[0].generalDetailId.generalDetailId" th:value="${id}" /> <!-- HIDDEN FIELD -->
+		  
+		  
+		  <div id="first" style="float: left;">
+		  	
+						
+				<div class="item">
+						<label>
+							<span>Awarding Body::</span>
+							
+							<input id="awardingBody"  type="text" name="programOfStudyList[0].awardingBody"  required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Awarding Body here</p>
+							</div>
+						</div>    
+				</div>
+						
+				<br/>
+				<div class="item">
+						<label>
+							<span>Title of Course:</span>
+							
+							<input  id="titleOfCourse" type="text" name="programOfStudyList[0].titleOfCourse" required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Title of Course here</p>
+							</div>
+						</div>    
+				</div>			
+						
+			
+				<br/>
+					<div class="item">
+						<label>
+							<span>Start Date:</span>
+							
+							<input  type="date" name="programOfStudyList[0].startDate" required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Start Date here</p>
+							</div>
+						</div>    
+				</div>			
+				<br/>
+						
+				<div class="item">
+						<label>
+							<span>Year of Entry:</span>
+							
+							<input  id="yearOfEntry" type="text" name="programOfStudyList[0].yearOfEntry" required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Year of Entry here</p>
+							</div>
+						</div>    
+				</div>			
+		  			
+		  			
+		  </div> <!-- END OF 1st div -->
+		   
+		   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+		  	
+		   
+   		</div>
+  
+	</div>	<!-- id="itemRowsPOS" Div Ends  -->
+
+
+	<div th:else="${#lists.isEmpty(programOfStudyList)}">
+		<div id="repeat" th:each="programOfStudy : ${programOfStudyList}">
+		
+			<input  type="hidden" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].generalDetailId.generalDetailId'" 
+	   		th:value="${programOfStudy.generalDetailId.generalDetailId}" />
+	
+		 	<input type="hidden" th:name="'referenceList[' +${programOfStudyStat.index}+ '].referenceId'"
+			 	th:value="${programOfStudy.programOfStudyId}" /> <br/>
+			 	
+	<div id="first" style="float: left;">
+		
+	
+				
+				<div class="item">
+						<label>
+							<span>Awarding Body:</span>
+							
+							<input id="awardingBody" type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].awardingBody'" th:value="${programOfStudy.awardingBody}" required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Awarding Body here</p>
+							</div>
+						</div>    
+				</div>
+			
+				<br/>
+				<div class="item">
+						<label>
+							<span>Title of Course:</span>
+							
+							<input  id="titleOfCourse" type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].titleOfCourse'" th:value="${programOfStudy.titleOfCourse}" required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Title of Course here</p>
+							</div>
+						</div>    
+					</div>
+				
+				<br/>
+				<div class="item">
+						<label>
+							<span>Start Date:</span>
+							
+							<input  type="date" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].startDate'" th:value="${programOfStudy.startDate}" required='required' /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+					</div>
+				
+				<br/>
+			
+				
+				<div class="item">
+						<label>
+							<span>Year of Entry:</span>
+							
+							<input id="yearOfEntry" type="text" th:name="'programOfStudyList[' + ${programOfStudyStat.index} + '].yearOfEntry'" th:value="${programOfStudy.yearOfEntry}" required='required' />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+					</div>
+							
+		</div>  <!-- END OF 1st div -->
+	
+				    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+
+
+		</div>
+	</div>
+
+	
+	  <button class="saveBtn" onClick="addRowPOS(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+	  <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	  
+	
+    
+	</form>
+	
+		<button class="saveBtn" id="cancelPOS"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/>
+
+
+</div>
+
+
+
+<div id="languageDiv" align="center" style="display:none;">
+
+<h1> Language Details </h1> 
+
+<br/><br/><br/>
+
+<form th:action="@{/consultancy/saveLanguageDetail}" novalidate="">
+ <!-- <h3>Enter the details of other Language(s) Test if any: </h3> -->	
+ 
+<div id="itemRowsLang">
+<div th:if="${#lists.isEmpty(languageList)}">
+    
+	<input id="idLD" type="hidden" name="languageList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	
+	<div id="first" style="float: left;"> 
+		
+	
+				
+				<div class="item">
+						<label>
+							<span>Test Name:</span>
+							<input name="languageList[0].testName" type="text" placeholder="e.g IELTS" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Test Name here</p>
+							</div>
+						</div>    
+			  </div>
+			   <br/>
+			   <div class="item">
+						<label>
+							<span>Test Score:</span>
+							 <input type="number" class="number"  name="languageList[0].testScore" data-validate-minmax="0,100" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Score must Not be 0 or -ve</p>
+							</div>
+						</div>
+			  </div>
+			   
+			   <br/>
+			   <div class="item">
+						<label>
+							<span>Test Date:</span>
+							
+							<input  type="date" name="languageList[0].testDate" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+			  </div>
+		
+			   <br/>
+			     <div class="item">
+						<label>
+							<span> Validity Date:</span>
+							
+							<input  type="date" name="languageList[0].validityDate" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+			    </div>	
+		</div> <!-- End of !st Div -->
+	
+				 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+	</div> <!-- if Div Ends -->
+
+</div>	<!-- id="itemRowsLang" Div Ends  -->
+
+<div th:else="${#lists.isEmpty(languageList)}" id="itemRowsLang">
+
+    <div th:each="language : ${languageList}">
+    	 <input type="hidden" th:name="'language[' +${languageStat.index}+ '].generalDetailId.generalDetailId'"
+    	 th:value="${language.generalDetailId.generalDetailId}" />
+    	  	<input type="hidden" th:name="'languageList[' +${languageStat.index}+ '].referenceId'"
+			 	th:value="${language.languageDetailId}" /> <br/>
+			 	
+	<div id="first" style="float: left;">
+	
+			   
+			  <div class="item">
+						<label>
+							<span>Test Name:</span>
+							<input th:name="'language[' +${languageStat.index}+ '].testName'"
+    							 th:value="${language.testName}" type="text" placeholder="e.g IELTS" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Test Name here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+			   
+			    <div class="item">
+						<label>
+							<span>Test Score:</span>
+							 <input type="number" class="number"  th:name="'language[' +${languageStat.index}+ '].testScore'"
+    							 th:value="${language.testScore}" data-validate-minmax="0,100" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Score must Not be 0 or -ve</p>
+							</div>
+						</div>
+				</div>
+			
+			<br/>
+			   <div class="item">
+						<label>
+							<span>Test Date:</span>
+							
+							<input  type="date" th:name="'language[' +${languageStat.index}+ '].testDate'"
+    						 th:value="${language.testDate}" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+			  </div>
+			   
+			<br/>
+			   
+			     <div class="item">
+						<label>
+							<span>Validity Date:</span>
+							
+							<input  type="date" th:name="'language[' +${languageStat.index}+ '].validityDate'"
+    						 th:value="${language.validityDate}" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+			  </div>
+
+		</div> <!-- 1st Table Div -->
+		
+		 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+	</div><!-- Each Language Div -->
+</div>		<!-- ELSE Language Div -->   
+		  
+    
+     <button class="saveBtn" onClick="addRowLang(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+	 <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	 
+	 </form>	
+	 
+	 <!-- <button id="cancelLang"> cancel</button> <br/> -->
+<button class="saveBtn" id="cancelLang"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="eduDiv" align="center" style="display:none;">  <!-- EDUCATION Div Start -->
+<h1> Educational Details  </h1> 
+<br/><br/><br/>
+<form th:action="@{/consultancy/saveEducationalDetail}" novalidate="">
+<div id="itemRows">
+<div th:if="${#lists.isEmpty(educationalDetailList)}">
+	
+	<input id="idED" type="hidden" name="educationalDetailList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	
+	
+	<div id="first" style="float: left;">
+
+			   
+			     <div class="item">
+						<label>
+							<span>Institute Name:</span>
+							<input name="educationalDetailList[0].instituteName" type="text" placeholder="e.g GCU" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Institue Name here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+			   
+			    <div class="item">
+						<label>
+							<span>Address:</span>
+							<input name="educationalDetailList[0].instituteName" type="text" placeholder="e.g Lahore" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Institute Address here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+
+		    <div class="item">
+						<label>
+							<span>Degree:</span>
+							<input name="educationalDetailList[0].degreeName" type="text" placeholder="e.g BCS(Hons.)" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Degree Program here</p>
+							</div>
+						</div>    
+			</div>
+			<br/>
+
+		   
+		     <div class="item">
+						<label>
+							<span>Subject:</span>
+							<input name="educationalDetailList[0].subject" type="text" placeholder="e.g Computer Science" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Major Subject here</p>
+							</div>
+						</div>    
+			</div>
+			<br/>
+		   
+		 	 <div class="item">
+						<label>
+							<span>Grade Awarded:</span>
+							<input name="educationalDetailList[0].gradeAwarded" type="text" placeholder="e.g A+ or 3.4 (GPA)" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Grade in Letters as A+/B- or GPA as 3.5 here</p>
+							</div>
+						</div>    
+			</div>
+			<br/>
+			   
+			    <div class="item">
+						<label>
+							<span>Date Awarded:</span>
+							
+							<input  type="date" name="educationalDetailList[0].dateAwarded" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+			  </div>
+				
+	</div> <!--  1st Table Div Ends -->
+	
+		 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+</div> <!-- If isEmpty Education Div Ends -->
+
+</div> <!-- id="itemRows" Ends -->
+
+
+	<div th:else="${#lists.isEmpty(educationalDetailList)}" id="itemRows"> <!-- EDUCATION ELSE Div Start -->
+	
+		<div th:each="educationalDetail : ${educationalDetailList}"> <!-- EDUCATION EACH Div Start -->
+		
+			 <input type="hidden" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].generalDetailId.generalDetailId'"
+			 th:value="${educationalDetail.generalDetailId.generalDetailId}" />
+			  	<input type="hidden" th:name="'referenceList[' +${educationalDetailStat.index}+ '].referenceId'"
+			 	th:value="${educationalDetail.educationalDetailId}" /> <br/>
+			 	
+			 	
+		<div id="first" style="float: left;">
+		 
+	
+					<div class="item">
+						<label>
+							<span>Institute Name:</span>
+							<input th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].instituteName'"
+							 th:value="${educationalDetail.instituteName}" type="text" placeholder="e.g GCU" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Institue Name here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+					
+					
+			  <div class="item">
+						<label>
+							<span>Address:</span>
+							<input th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].instituteName'"
+							 th:value="${educationalDetail.instituteName}" type="text" placeholder="e.g Lahore" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Institute Address here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+
+
+					
+			<div class="item">
+						<label>
+							<span>Degree:</span>
+							<input th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].degreeName'"
+		  					  th:value="${educationalDetail.degreeName}" type="text" placeholder="e.g BCS(Hons.)" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Degree Program here</p>
+							</div>
+						</div>    
+			</div>
+			<br/>
+
+					
+		 <div class="item">
+						<label>
+							<span>Subject:</span>
+							<input th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].subject'"
+		 					   th:value="${educationalDetail.subject}" type="text" placeholder="e.g Computer Science" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Major Subject here</p>
+							</div>
+						</div>    
+			</div>
+			<br/>
+				
+				 <div class="item">
+						<label>
+							<span>Grade Awarded:</span>
+							<input th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].gradeAwarded'"
+		   						 th:value="${educationalDetail.gradeAwarded}" type="text" placeholder="e.g A+ or 3.4 (GPA)" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Grade in Letters as A+/B- or GPA as 3.5 here</p>
+							</div>
+						</div>    
+			</div>
+			<br/>
+				
+			 <div class="item">
+						<label>
+							<span>Date Awarded:</span>
+							
+							<input  type="date" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].dateAwarded'"
+		    					th:value="${educationalDetail.dateAwarded}" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Date here</p>
+							</div>
+						</div>    
+			  </div>
+			
+				
+		</div>	 <!-- 1st Table Div Ends -->
+					
+					<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>	
+	
+		</div> <!-- EDUCATION EACH Div End -->
+	
+	</div> <!-- EDUCATION ELSE Div End -->
+
+	
+	 <button class="saveBtn" onClick="addRow(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+	 <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	
+    
+	</form>
+
+<!-- <button id="cancelEDU"> cancel</button> <br/> -->
+<button class="saveBtn" id="cancelEDU"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/>
+
+
+</div> <!-- EDUCATION Div Endzzzzzzzzzzzzzzzzz -->
+
+
+
+
+<div id="workExpDiv" align="center" style="display:none;">  <!-- WORK EXPERIENCE DIV START -->
+
+<h1> Work Experience Details  </h1> 
+
+<br/> <br/> <br/>
+
+<form th:action="@{/consultancy/saveWorkExperience}" method="get" novalidate="">
+	<div id="itemRowsWorkExp">
+	
+	
+	<div th:if="${#lists.isEmpty(workExperienceList)}">  <!-- WORK EXPERIENCE IF isEmpty DIV Start -->
+	<!-- is nulll  -->
+	
+		<input id="idWED" type="hidden" name="workExperienceList[0].generalDetailId.generalDetailId" th:value="${id}" />
+		
+		<div id="first" style="float: left;">
+				
+	
+    		  	<div class="item">
+						<label>
+							<span>Organization:</span>
+							<input name="workExperienceList[0].organization" placeholder="e.g Google Inc." type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Orangization Name here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+    		  		 
+
+    		  	 <div class="item">
+						<label>
+							<span>Job Title:</span>
+							<input name="workExperienceList[0].designation" placeholder="e.g Software Analyst" type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Designation here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+    		  		 
+  
+    		  		 
+    		  	 <div class="item">
+						<label>
+							<span>Job Description:</span>
+							<input name="workExperienceList[0].duties" placeholder="Responsibilites" type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Responisibilities here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+    		  		
+    		  		 
+    		   <div class="item">
+						<label>
+							<span>Date:(From)</span>
+							
+							<input  type="date" name="workExperienceList[0].startDate" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Start Date here</p>
+							</div>
+						</div>    
+			  </div>
+    	<br/>	  		 
+    		  		 
+    		  	<div class="item">
+    		  	
+						<label>
+							<span>Date:(To)</span>
+							
+							<input id="changeDateToPresent"  type="date" name="workExperienceList[0].endDate"  required="required" /> 
+							
+						</label>
+						
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter End Date here</p>
+							</div>
+						</div>    
+			  </div>
+			  
+			  <br/>
+			  	<div class="item">
+						<label>
+							<span><a href="#"><button id="toPresentBtn" style=" background: transparent;
+    border: none !important; text-decoration: underline;">  Present </button></a></span>
+							
+						</label>
+						
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b> 
+								<p>Select Present if your are currentlly working in this organization</p>
+							</div>
+						</div>    
+			  </div>
+			 
+			  	<div class="item">
+						<label>
+							<span><a href="#"><button id="toDateBtn" style=" background: transparent;
+    border: none !important; text-decoration: underline;">  Date </button></a></span>
+							
+						</label>
+						
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Select Date uptill when you work in this Organization</p>
+							</div>
+						</div>    
+			  </div>
+			  
+			  
+			  
+
+		</div> <!-- 1st Table DIV -->
+		
+	 			 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+		
+	</div> <!-- WORK EXPERIENCE IF isEmpty DIV End -->
+	
+</div>  <!-- id="itemRowsWorkExp" DIV Ends -->	
+	
+
+	<div th:else="${#lists.isEmpty(workExperienceList)}" id="itemRowsWorkExp"><!-- WORK EXPERIENCE ELSE DIV START -->
+	
+		<div th:each="workExperience : ${workExperienceList}">  		      <!-- WORK EXPERIENCE EACH DIV START -->
+		<!--not null-->
+		
+		
+			 <input type="hidden" th:name="'workExperienceList[' +workExperienceStat.index+ '].generalDetailId.generalDetailId'"
+			 th:value="${workExperience.generalDetailId.generalDetailId}" />
+			  	<input type="hidden" th:name="'referenceList[' +${workExperienceStat.index}+ '].referenceId'"
+			 	th:value="${workExperience.workExperienceId}" /> <br/>
+			 	
+			 	
+			 	
+	<div id="first" style="float: left;">
+			   
+    		   <div class="item">
+						<label>
+							<span>Organization:</span>
+							<input th:name="'workExperienceList[' +${workExperienceStat.index}+ '].organization'"
+		  					   th:value="${workExperience.organization}" placeholder="e.g Google Inc." type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Orangization Name here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+    		   
+    		    <div class="item">
+						<label>
+							<span>Designation:</span>
+							<input th:name="'workExperienceList[' +${workExperienceStat.index}+ '].designation'"
+		     				th:value="${workExperience.designation}" placeholder="e.g Software Analyst" type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Designation here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+    		   
+    		   
+    		   <div class="item">
+						<label>
+							<span>Duties:</span>
+							<input th:name="'workExperienceList[' +${workExperienceStat.index}+ '].duties'"
+		    				 th:value="${workExperience.duties}" placeholder="Responsibilites" type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Responisibilities here</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+	
+    		   
+    		     <div class="item">
+						<label>
+							<span>Date:(From)</span>
+							
+							<input  type="date" th:name="'workExperienceList[' +${workExperienceStat.index}+ '].startDate'"
+						 th:value="${workExperience.startDate}" required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Start Date here</p>
+							</div>
+						</div>    
+			  </div>
+    	<br/>
+    		   
+    		   <div class="item">
+						<label>
+							<span>Date:(To)</span>
+							
+							<input  type="date" th:name="'workExperienceList[' +${workExperienceStat.index}+ '].endDate'"
+		   				  th:value="${workExperience.endDate}"  required="required" /> 
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter End Date here</p>
+							</div>
+						</div>    
+			  </div>
+
+	
+	</div> <!-- 1st Table Div Ends -->
+			 	
+			 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+			
+		</div>  <!-- WORK EXPERIENCE EACH DIV End -->
+	</div>	<!-- WORK EXPERIENCE ELSE DIV End -->
+	
+
+		  <button class="saveBtn" onClick="addRowWorkExp(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+		  <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		
+    
+	</form>
+
+<!-- <button id="cancelworkEXP"> cancel</button> <br/> -->
+
+
+  <button class="saveBtn" id="cancelworkEXP"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/>
+
+
+</div>
+
+
+
+
+
+
+<div id="psDiv" align="center" style="display:none;">
+
+<h1> Personal Statement </h1> 
+<br/><br/><br/>
+<form th:action="@{/consultancy/savePersonalDetail}" novalidate="">
+
+	
+	<div th:if="${personalStatement == null}">
+	
+		 <input type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" />  <!-- MISTAKE -->
+		<!-- <textarea type="text" name="personalStatement" maxlength="1050">
+		Enter text here...</textarea> <br/> -->
+		
+		<div id="first" style="float: left;">
+		
+					
+					 <div class="item">
+						<label>
+							<span>Your Personal Statement:</span>
+							<textarea style="resize: none;" type="text"  name="personalStatement" placeholder="Personal Statement" required="required"></textarea>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Personal Statement Here....</p>
+							</div>
+						</div>    
+				</div>
+		
+		</div>
+		
+			
+		<!-- <input  type="submit" value="Save" />
+		<button id="cancelPS"> cancel</button> <br/> -->
+		 <!--  <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		  <button class="saveBtn" id="cancelPS"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/> -->
+	</div>
+	
+	<div th:if="${personalStatement != null}">
+	
+		<input type="hidden" th:name="${personalStatement.generalDetailId.generalDetailId}" th:value="${id}" />
+		
+		<div id="first" style="float: left;">
+			
+			<input type="hidden"  name="personalStatementId" th:value="${personalStatement.personalStatementId}" />
+			
+			
+				    <div class="item">
+						<label>
+							<span>Your Personal Statement:</span>
+							<textarea style="resize: none;" type="text"  th:name="personalStatement" th:value="${personalStatement.personalStatement}"  required="required"></textarea>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Your Personal Statement Here....</p>
+							</div>
+						</div>    
+				</div>
+				   
+				
+		
+		</div>
+	
+	
+		<!-- <textarea rows="4" cols="50" name="personalStatement" th:value="${personalStatement.personalStatement}" maxlength="1050">
+		Enter text here...</textarea> <br/> -->
+		
+		
+		
+		<!-- <input  type="submit" value="Save" />
+		<button id="cancelPS"> cancel</button> <br/> -->
+	
+	</div>
+	
+	 <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		  <button class="saveBtn" id="cancelPS"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/>
+
+
+
+</form>
+</div>
+
+
+
+
+
+<div id="refDiv" align="center" style="display:none;">
+
+<h1> References </h1> 
+<br/> <br/> <br/>
+
+<form th:action="@{/consultancy/saveReference}" method="get" novalidate="">
+<div id="itemRowsREF">
+
+
+	<div th:if="${#lists.isEmpty(referenceList)}">
+
+	<input id="idREF" type="hidden" name="referenceList[0].generalDetailId.generalDetailId" th:value="${id}" />	
+	
+	<div id="first" style="float: left;">
+	
+	
+			    
+			    <div class="item">
+						<label>
+							<span>Name:</span>
+							<input name="referenceList[0].name" placeholder="e.g Dr.Fareeha Zafar." type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Name of Reference Person</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+	
+			    
+			    <div class="item">
+						<label>
+							<span>Designation:</span>
+							<input name="referenceList[0].designation" placeholder="e.g Dean of Computer Sc." type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Designation of Reference Person</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+	
+			    
+			   <div class="item">
+						<label>
+							<span>Relationship:</span>
+							<input name="referenceList[0].relationship" placeholder="e.g Teacher." type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Relationship with the Reference Person</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+    
+			    <div class="item">
+						<label>
+							<span>Address:</span>
+							<input name="referenceList[0].address" placeholder="e.g House.# 1,Town." type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Address as House.# ? Town,Block.#,City,Country </p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+	
+			    
+			    <div class="item">
+						<label>
+							<span>Contact (M):</span>
+							<input type="tel" class="tel" name="referenceList[0].mobileContact" placeholder="e.g +923110237824" required="required" data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Mobile Contact No <br/>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+					</div>
+			    
+			    <br/>
+			  
+			    
+			    <div class="item">
+						<label>
+							<span>Contact (O):</span>
+							<input type="tel" class="tel" name="referenceList[0].otherContact" placeholder="e.g +04235221255" required="required" data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Office Contact No <br/>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+					</div>
+			    
+			    <br/>
+			   
+			    
+			    <div class="item">
+						<label>
+							<span>FAX:</span>
+							<input type="number" class="number" name="referenceList[0].fax" placeholder="e.g +(country.#)(area.#)(fax.#)" required="required"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Fax No here.</p>
+							</div>
+						</div>
+					</div>
+					
+				<br/>
+			
+			    
+			     <div class="item">
+						<label>
+							<span>Email:</span>
+							<input type="email" class="email"  name="referenceList[0].email" placeholder="e.g dr.fareehazafar@gcu.com"  required="required"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Email of Reference here.</p>
+							</div>
+						</div>
+					</div>
+					
+				<br/>
+  
+			    <div class="item">
+						<label>
+							<span>Years known:</span>
+							<input type="number" class="number" name="referenceList[0].yearsKnown" placeholder="e.g 5 (Years)" data-validate-minmax="0,100" required="required"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter From How many Years you know the Person.</p>
+							</div>
+						</div>
+				</div>
+	
+	</div> <!-- 1st Table  Ends-->
+	
+	
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+			
+	
+</div> <!-- IF isEmpty Check --> 
+
+</div> <!-- ITEM ROWWW DIV ENS -->  	
+
+	
+	<div th:else="${#lists.isEmpty(referenceList)}" id="itemRowsREF">
+		<div th:each="reference : ${referenceList}">
+		
+			 <input type="hidden" th:name="'referenceList[' +${referenceStat.index}+ '].generalDetailId.generalDetailId'"
+			 	th:value="${id}" />
+			 	<input type="hidden" th:name="'referenceList[' +${referenceStat.index}+ '].referenceId'"
+			 	th:value="${reference.referenceId}" /> 
+			 	
+
+			<div id="first" style="float: left;">    
+			    
+			     <div class="item">
+						<label>
+							<span>Name:</span>
+							<input th:name="'referenceList[' +${referenceStat.index}+ '].name'"
+								th:value="${reference.name}"  type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Name of Reference Person</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+			    
+			   <div class="item">
+						<label>
+							<span>Designation:</span>
+							<input th:name="'referenceList[' +${referenceStat.index}+ '].designation'"
+		    					th:value="${reference.designation}"  type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Designation of Reference Person</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+			   
+			    
+			     <div class="item">
+						<label>
+							<span>Relationship:</span>
+							<input  th:name="'referenceList[' +${referenceStat.index}+ '].relationship'"
+		    					th:value="${reference.relationship}"  type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Relationship with the Reference Person</p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+			    
+			     <div class="item">
+						<label>
+							<span>Address:</span>
+							<input th:name="'referenceList[' +${referenceStat.index}+ '].address'"
+		   						th:value="${reference.address}"  type="text" required="required" />
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Address as House.# ? Town,Block.#,City,Country </p>
+							</div>
+						</div>    
+				</div>
+			<br/>
+			    
+			     <div class="item">
+						<label>
+							<span>Contact (M):</span>
+							<input type="tel" class="tel" th:name="'referenceList[' +${referenceStat.index}+ '].mobileContact'"
+		   						th:value="${reference.mobileContact}" required="required" data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+					</div>
+			    
+			    <br/>
+			    			    
+			      <div class="item">
+						<label>
+							<span>Contact (O):</span>
+							<input type="tel" class="tel" th:name="'referenceList[' +${referenceStat.index}+ '].otherContact'"
+		   						th:value="${reference.otherContact}" required="required" data-validate-length-range="8,20"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Office Contact No <br/>Notice that for a phone number user can input a '+' sign, a dash '-' or a space ' '</p>
+							</div>
+						</div>
+					</div>
+			    
+			    <br/>
+			    
+			     <div class="item">
+						<label>
+							<span>FAX:</span>
+							<input type="number" class="number" th:name="'referenceList[' +${referenceStat.index}+ '].fax'"
+		   						th:value="${reference.fax}"  required="required"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Fax No here.</p>
+							</div>
+						</div>
+					</div>
+					
+				<br/>
+			    
+			    
+			     <div class="item">
+						<label>
+							<span>Email:</span>
+							<input type="email" class="email"  th:name="'referenceList[' +${referenceStat.index}+ '].email'"
+		    				th:value="${reference.email}"  required="required"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter Email of Reference here.</p>
+							</div>
+						</div>
+					</div>
+					
+				<br/>
+			 
+			    
+			     <div class="item">
+						<label>
+							<span>Years known:</span>
+							<input type="number" class="number" th:name="'referenceList[' +${referenceStat.index}+ '].yearsKnown'"
+		    				th:value="${reference.yearsKnown}" data-validate-minmax="0,100" required="required"/>
+						</label>
+						<div class='tooltip help'>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<p>Enter From How many Years you know the Person.</p>
+							</div>
+						</div>
+					</div>
+			    
+			    
+			</div><!-- End of 1st Table -->		
+			
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+		
+		</div> <!-- EACH  -->
+	</div> <!-- ELSE -->
+	
+		 <button class="saveBtn" onClick="addRowREF(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+		  <button class="saveBtn" id='send' type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	
+	</form>
+
+<!-- <button id="cancelREF"> cancel</button> <br/> -->
+ <button class="saveBtn" id="cancelREF"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/>
+
+</div>
+
+
+
+<div id="declareDiv" align="center" style="display:none;">
+
+<h1> Declaration </h1> 
+<br/><br/><br/>
+<form>
+
+
+
+<input type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" />
+
+<div id="first" style="float: left;"> 
+
+	<table>
+			
+			<tr>
+						<td>
+    							<label > 	Please indicate how you heard about the course you have applied for. </label>
+    			   		</td>
+    			   		
+    					<td>
+    						  
+    						 <div class="item">
+						<label>
+							<br/>
+							<select class="required" name="dropdown">
+								<option value="">-- none --</option>
+								<option value="o1">Family</option>
+								<option value="o2">Friend</option>
+								<option value="o3">Internet</option>
+								<option value="o3">Exibition</option>
+								<option value="o3">Open Day</option>
+								<option value="o3">Agent</option>
+							</select>
+						
+						</label>
+						<div class='tooltip help'>
+							<br/>
+							<span>?</span>
+							<div class='content'>
+								<b></b>
+								<br/>
+								<p> Select the option from where you heard of the course you are applying for</p>
+							</div>
+						</div>
+					</div>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			   
+			    
+			   
+			   	<tr>
+			   	
+						<td>
+    							<label  class=""> 	Other (please specify) </label>
+    			   		</td>
+    			   		
+    					<td> 
+    						 <div class="item">
+    							<input type="text" name="hear" value="" required="required"></input> 
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>If you have any other source that are not listed here. Kindly Mention here.</p>
+									</div>
+								</div>
+    						  </div>
+    			 	    </td>     
+    			 
+			    </tr> 	
+			  
+			    <tr>
+						<td>
+    							<label  class=""> 	Under the Data Protection Act 1998.</label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="hidden" name="hear" value=""></input> <br/><br/>
+    							
+    						
+    			 	    </td>     
+			    </tr> 	
+			    
+			     <tr>
+						<td>
+    							<label  class=""> 	 I </label>
+    			   		</td>
+    			   		
+    					<td>	 <div class="item">
+    							<input type="text" name="" value="" placeholder="Your Name Here ...." required="required"> </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Enter Your (Student's) Name Here</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr>
+			    
+			    
+			      <tr>
+						<td>
+    							<label  class="">  S/O </label>
+    			   		</td>
+    			   		
+    					<td>
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="Your Father's Name..." required="required"> </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Enter Student (Father's) Name Here</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr> 
+			    
+			      <tr>
+						<td>
+    							<label  class="">  Holder of </label>
+    			   		</td>
+    			   		
+    					<td>	
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="Holder Of..." required="required" > </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Mention Your Nationality</p>
+									</div>
+								</div>
+    							
+    							
+    							</div>
+    			 	    </td>     
+			    </tr> 	
+			    
+			      <tr>
+						<td>
+    							<label  class="">  Pakistani Passport number </label>
+    			   		</td>
+    			   		
+    					<td>	
+		    					 <div class="item">
+    								<input type="text" name="" value="" placeholder="Your Passport No." required="required" > </input>
+    								<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Enter Your Passport Number </p>
+									</div>
+								</div>
+    								
+    							</div>				
+    			 	    </td>     
+			    </tr> 	
+				
+				<tr>
+						<td>
+    							<label  class="">  Resident of </label>
+    			   		</td>
+    			   		
+    					<td>	
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="Your Permanent Address" required="required" > </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Dont Forget to mention your Permanent Address here. This Address will also be used as Postal Address.</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr> 
+			    
+			    <tr>
+						<td>
+    							<label  class="">  I do hereby declare on solemn affirmation as under following Points: </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<p>1.      That I am the deponent of this affidavit and am well conversant with the facts citied herein. </p><br/>
+    							<p>2.      That all the documents, which I submitted on my behalf, are true and correct. </p><br/>
+    							<p>3.      That I am not involved in any political or religious affairs nor am I connected with any criminal group activity. Moreover, I do not belong  any terrorist organization. </p><br/>
+    							<p>4.      That I have never been convicted by any court of law, Police department or any other Government department in Pakistan Police report attached. </p><br/>
+    			 	    		
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class=""> 5.      That I am going to </label>
+    			   		</td>
+    			   		
+    					<td>
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="Country Name" required="required"> </input> <br/>
+    							<p>&nbsp; for higher studies</p>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Choose something or choose not. what shall it be?</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr> 
+			    
+			    <tr>
+						<td>
+    							<label  class="">  6.      That I have applied for study permit in  </label>
+    			   		</td>
+    			   		
+    					<td>	
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="College/Uni" required="required"> </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Choose something or choose not. what shall it be?</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr> 
+			    
+			     <tr>
+						<td>
+    							<label  class=""> 7.      That as per policy of </label>
+    			   		</td>
+    			   		
+    					<td>	
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="...." required="required"> </input> <br/> <br/>
+    							<p>high commission I have the required funds for my study in</p>
+    					
+    							<input type="text" name="" value="" placeholder="...." required="required"> </input><br/> <br/>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Choose something or choose not. what shall it be?</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class=""> 8.  That I will be regular in classes and will not join any subversive activities in </label>
+    			   		</td>
+    			   		
+    					<td>	
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="...." required="required"> </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Choose something or choose not. what shall it be?</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="">9.      That I will obey the Rules and Regulations in </label>
+    			   		</td>
+    			   		
+    					<td>	
+    					
+    							 <div class="item">
+    							<input type="text" name="" value="" placeholder="...." required="required" > </input>
+    							<div class='tooltip help'>
+						
+									<span>?</span>
+									<div class='content'>
+										<b></b>
+											<p>Choose something or choose not. what shall it be?</p>
+									</div>
+								</div>
+    							</div>
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+								
+    							<label  class="">10.  That I will have good behavior with all my classmates. </label>
+    			   		</td>
+    			   		
+    					<td>
+    						 <div class="item">
+    							<input type="hidden" name="" value=""> </input><br/><br/>
+    						</div>
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="">11.     I shall be liable to pay all the consultation fee to my consultant by all means i.e Amount in Rs: </label>
+    			   		</td>
+    			   		
+    					<td>	
+    							 <div class="item">
+    							 	<br/>
+	    							<input type="text" name="" value="" placeholder="Amount Payable" required="required"> </input>
+	    							<div class='tooltip help'>
+						
+												<span>?</span>
+											<div class='content'>
+												<b></b>
+												<p>Choose something or choose not. what shall it be?</p>
+											</div>
+								   </div>
+   								 </div> 						
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="">  That whatever stated above is true to the best of my knowledge and belief and nothing has been concealed. </label>
+    			   		</td>
+    			</tr>
+    			<tr>  		
+    					<td>
+    								 <div class="item">
+    							    <p>Appicants Signature:</p>
+    							    <input type="text" name="signature" placeholder="Signature" required="required" ></input> 
+    							    		<div class='tooltip help'>
+						
+												<span>?</span>
+											<div class='content'>
+												<b></b>
+												<p>Choose something or choose not. what shall it be?</p>
+											</div>
+								   			</div>
+    								</div>
+    			 	    </td>
+    			 </tr>
+    		
+    			 
+    			<tr>	 	    
+    			 	    <td>
+    								 <div class="item">
+    							   	<p>Appicants NIC:</p>
+   									<input type="text" name="nic" placeholder="N.I.C" required="required" ></input>
+   											<div class='tooltip help'>
+						
+												<span>?</span>
+											<div class='content'>
+												<b></b>
+												<p>Choose something or choose not. what shall it be?</p>
+											</div>
+								   			</div>
+    								
+    								</div>
+    			 	    </td>  
+    			</tr>
+    			<tr> 
+    			 	    <td>
+    			 	    			 <div class="item">
+    							   	<p>Date:</p>
+    								 <input type="date" name="signature" required="required"></input> 
+    								 	<div class='tooltip help'>
+						
+												<span>?</span>
+											<div class='content'>
+												<b></b>
+												<p>Choose something or choose not. what shall it be?</p>
+											</div>
+								  		 </div>
+	
+    								
+    								</div>
+    			 	    </td>    
+    			 	    
+    				     
+			    </tr>
+	
+	</table>
+
+
+	<!--      <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+ -->
+    
+</div> <!-- id-"first" DIV Endssss -->
+
+</form>
+
+<!-- <button id="cancelDEC"> cancel</button> <br/>
+<button onclick="myFunction()">Print Declaration</button>
+ -->
+   <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+<button class="saveBtn" id="cancelDEC"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button>
+<button class="saveBtn" onclick="myFunction()"><img th:src="@{/resources/Interface/icons/print.png}"/></button> 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+</div>
+
+
+
+
+            
+            
+      	</div><!-- end of div.box-container -->
+      	</div> <!-- end of div.box -->
+      
+      </div><!-- end of div#mid-col --><!-- end of div#right-col -->     
+      
+      <span class="clearFix">&nbsp;</span>     
+</div><!-- end of div#content -->
+<div class="push"></div>
+</div><!-- end of #container -->
+
+<div id="footer-wrap">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">CSS</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2013 Consultancy Software Solution. <a href="">CSS</a>, 
+            via <a href="">Orange Developers</a></p>
+        </div>
+        
+	</div>
+</div>
+
+ <script type="text/javascript" th:src="@{/resources/FormValidation/js/jquery.min.js}"></script> 
+  <script type="text/javascript" th:src="@{/resources/FormValidation/js/multifield.js}"></script>
+  <script type="text/javascript" th:src="@{/resources/FormValidation/js/validator.js}"></script>
+  
+  
+<script type="text/javascript">
+		// initialize the validator function
+		validator.message['date'] = 'not a real date';
+		
+		
+		$('form')
+			.on('blur', 'input[required], input.optional, select.required', validator.checkField)
+			.on('change', 'select.required', validator.checkField)
+			.on('keypress', 'input[required][pattern]', validator.keypress);
+			
+		$('.multi.required')
+			.on('keyup blur', 'input', function(){ 
+				validator.checkField.apply( $(this).siblings().last()[0] );
+			});
+		
+		// bind the validation to the form submit event
+		//$('#send').click('submit');//.prop('disabled', true);
+		
+		$('form').submit(function(e){
+			e.preventDefault();
+			var submit = true;
+			// evaluate the form using generic validaing
+			if( !validator.checkAll( $(this) ) ){
+				submit = false;
+			}
+
+			if( submit )
+				this.submit();
+			return false;
+		});
+		
+		/* FOR DEMO ONLY */
+		$('#vfields').change(function(){
+			$('form').toggleClass('mode2');
+		}).prop('checked',false);
+		
+		$('#alerts').change(function(){
+			validator.defaults.alerts = (this.checked) ? false : true;
+			if( this.checked )
+				$('form .alert').remove();
+		}).prop('checked',false);
+		
+		
+		
+		/*   */
+	</script>
+
+</body>
+</html>

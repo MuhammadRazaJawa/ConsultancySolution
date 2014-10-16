@@ -1,0 +1,2183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+
+	<link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/reset.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/style.css}" />
+    
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/myCustom.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/customCSS/tags.css}" />
+     
+     
+<!-- Calender Filess -->    
+<link rel="stylesheet" type="text/css" th:href="@{/resources/Interface/Calender/css/mobipick.css}" />
+<script type="text/javascript" th:src="@{/resources/Interface/Calender/external/xdate.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Calender/external/xdate.i18n.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Calender/js/mobipick.js}"></script>
+<script type="text/javascript" th:src="@{/resources/Interface/Calender/js/calender.js}"></script>
+ <!-- Calender Filess --> 
+     
+    
+    <link rel="stylesheet"  type="text/css"  th:href="@{/resources/Interface/js/jquery.wysiwyg.css}" />
+    <link rel="stylesheet"  type="text/css" media="screen"  th:href="@{/resources/Interface/js/colorbox.css}" />
+    <link  rel="stylesheet" type="text/css" media="screen" th:href="@{/resources/Interface/js/colorbox-custom.css}" />
+
+
+<script type="text/javascript" th:src="@{/resources/js/jquery.min.js}"> </script>
+<script type="text/javascript" th:src="@{/resources/js/jquery-2.0.3.js}"></script>
+
+<!-- Add More Multiple Fields Custom JS Files -->  
+<script type="text/javascript" th:src="@{/resources/js/addPOSMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addLangMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addEduMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addWorkExpMultiple.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/addRefMultiple.js}"></script>
+
+<!-- Add More Multiple Fields Custom JS Files -->  
+
+<script type="text/javascript" th:src="@{/resources/Interface/Validation/FormValidation.js}"></script>
+
+<script type="text/javascript" th:src="@{/resources/js/myCustomJS.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/selectOption.js}"></script>
+
+<!-- Interface JS Filesss -->
+
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery-1.3.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.colorbox-min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.ui.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.corners.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/bg.pos.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.wysiwyg.js}"></script>    
+    <script type="text/javascript" th:src="@{/resources/Interface/js/tabs.pack.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/cleanity.js}"></script>
+
+</head>
+
+<body>
+
+<div id="container">
+ 
+    <div id="header">
+      <div id="top">
+      <h1><a href="#">CSS</a></h1>
+      <p id="userbox">Hello <strong>Muhammad Raza</strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp;<a href="#">Logout</a> <br />
+      <small>Last Login: 12 May 2009</small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li class="selected"><a href="#">Dashboard</a></li>
+        <li><a class="top-level" href="#">Users <span>&nbsp;</span></a>
+          <ul>
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Edit Users</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a class="top-level" href="#">Settings <span>&nbsp;</span></a>
+            <ul>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">File Paths</a></li>
+            <li><a href="#">User Profiles</a></li>
+          </ul></li>
+      </ul>
+	
+      <span class="clearFix">&nbsp;</span>
+    </div><!-- end of #header -->
+
+<div id="content">
+	<div id="content-top">
+    <h2>Dashboard</h2>
+     
+      <span class="clearFix">&nbsp;</span>
+      </div><!-- end of div#content-top -->
+      
+      
+      
+      <div id="left-col">
+      
+      
+
+          <div class="box">
+              <h4 class="yellow">Registration</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone -->
+              <ul class="list-links">
+              	
+               <!--  <li><a href="#"><button id="searchCriteriaDetail"> Search Criteria</button></a></li> -->
+              
+                  <li><a href="#"><button id="personalDetail"> Personal Details</button></a></li>
+                  <li><a href="#"><button id="generalDetail"> General Details</button> </a></li>
+                  <li><a href="#"><button id="posDetail"> Program Of Study</button> </a></li>
+                  <li><a href="#"><button id="languageDetail"> Language Details</button></a></li>
+                  <li><a href="#"><button id="educationalDetail"> Educational Details</button></a></li>
+                  <li><a href="#"><button id="workExperienceDetail"> Work Exp Details</button></a></li>
+                  <li><a href="#"><button id="personalStatementDetail"> Personal Statement</button></a></li>
+                  <li><a href="#"><button id="referencesDetail"> References</button></a></li>
+                 <!-- <li><a href="#"></a>
+                  		<ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        </ul>
+                  </li>-->
+                  <li><a href="#"><button id="declarationDetail"> Declaration</button> </a></li>
+                  <li><a href="#"><button id="showAllDetail"> Show All</button> </a></li>
+                  <li><a href="#"><button id="cancelAllDetail"> Cancel</button> </a></li>
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box --><!--end of div.box --><!-- end of div.box -->
+      </div> <!-- end of div#left-col -->
+      
+      
+      
+       <div id="mid-col" class="full-col">
+      	
+   	  <div class="box">
+      		<h4 class="white">Search Result</h4>
+        <div class="box-container">   
+        
+        
+       <div th:if="${client != null}">
+ <!-- not null not null  not null not null not null not null not null not null   -->	
+	
+		<form th:action="@{searchClient}">
+<h1>Search By:</h1>
+<br/> <br/>
+	<select name="attribute">
+		<option value="firstName">Name</option>
+		<option value="mobileNumber">Mobile Number</option>
+	  	<option value="email">Email Address</option>
+		<option value="nic">N.I.C</option>
+	</select>
+
+<h1>Search Value:</h1>	
+	 <input type="text" name="keyword"/>
+
+	<input type="submit" value="search" />
+</form>
+	
+	<br/>
+<form th:action="@{getClientDetail}">
+
+	<!-- IS KO Nikal Na don ????? -->
+
+	ID: <input type="text" id="" name="id" disabled="disabled" th:value="${client.generalDetailId}" /> <br/>
+	
+	<input type="submit" value="search" />
+	
+
+</form>
+
+	<div id="firstSeachResult" style="float: left;">
+	
+		 <table>
+		 
+		 	<tr>
+				<td>
+    				<label class="labelClass"> First Name:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.firstName}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass"> Father Name:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.fatherName}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass"> Age:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.age}" />
+   			   </td>    
+			</tr>
+			
+				
+			<tr>
+				<td>
+    				<label class="labelClass"> City:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.city}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass"> Mobile Number:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.mobileNumber}" />
+   			   </td>    
+			</tr>
+			
+		</table>
+	</div>
+	
+	<div id="secondSeachResult"> 
+	
+	<table>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">Other Contact:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.otherContact}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">First Language:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.firstLanguage}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">Email Address:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.email}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">N.I.C:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="text" disabled="disabled" th:value="${client.nic}" />
+   			   </td>    
+			</tr>
+			
+			<tr>
+				<td>
+    				<label class="labelClass">Status:</label>
+    		   </td>
+    			<td>	
+			   		<input class="inputClass" type="hidden" th:value="status" value="${client.inactive}" />
+   			   </td>    
+			</tr>
+		 	
+		 
+		 </table>
+		 
+		 <br/>
+		
+	
+	</div>
+	
+	
+
+
+</div>
+<div th:if="${client == null}">
+<!--is null is null is null is null is null is null is null is null is null is null is null is null is null is null is null is null is null  -->
+	<form th:action="@{searchClient}">
+	
+<h1>Search By:</h1>
+<br/> <br/>
+	<select name="attribute">
+		<option value="firstName">Name</option>
+		<option value="mobileNumber">Mobile Number</option>
+	  	<option value="email">Email Address</option>
+		<option value="nic">N.I.C</option>
+	</select>
+	
+<h1>Search Value:</h1> 
+	<input type="text" name="keyword"/>
+
+	<input type="submit" value="search" />
+</form>
+	
+</div>
+       
+        
+        
+        </div>
+        </div>  	
+        	
+        			
+</div> <!-- end of MID COL div.box -->
+      
+      <div id="mid-col" class="full-col"><!-- end of div.box -->
+      	
+   	  <div class="box">
+      		<h4 class="white">Forms</h4>
+        <div class="box-container">     	
+        	
+      	
+      <div id="pdDiv" align="center" style="display:none;">
+
+<h1> Personal Details </h1> <br/>
+
+
+<form th:action="@{savePersonalDetail}">
+
+
+<input class="inputClass" type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" /> <br/>
+
+<div id="first" style="float: left;">  
+
+<table border="1px solid">
+
+<tr>
+	<td>
+    		<label class="labelClass"> Title: </label>
+    </td>
+    <td>
+    		<input class="" type="radio" name="sex" value="mr">Mr</input>
+			<input class="" type="radio" name="sex" value="ms">Ms</input>
+			<input class="" type="radio" name="sex" value="miss">Miss </input>
+			<input class="" type="radio" name="sex" value="mrs">Mrs </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass">  Name: </label>
+    </td>
+    <td>
+    		 <input class="inputClass" type="text" name="familyName" placeholder="Surname/Family" value=""> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		<label class="labelClass"> First Name: </label>
+    </td>
+    <td>
+    		  <input class="inputClass" type="text" name="firstName" value=""> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		<label class="labelClass"> Agent Address </label>
+    </td>
+    <td>
+    		   <input class="inputClass" name="agentAddress" placeholder="Correspondence Agent Address" value=""> </input> 
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Country </label>
+    </td>
+    <td>
+    		   <select class="selectClass" name="country">
+					  <option value="Pakistan">Pakistan</option>
+  					  <option value="India">India</option>
+  					  <option value="USA">U.S.A</option>
+  
+			  </select> 
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    			
+				<label class="labelClass"> Postal Code: </label>
+    </td>
+    <td>
+    		    <input class="inputClass" type="text" name="postalCode" value=""> </input> 
+    </td>    
+</tr>
+
+
+</table>
+
+</div> <!-- END of 1st table DIV -->
+
+
+
+<div  id="second"> 
+
+<table>
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Telephone No: </label>
+    </td>
+    <td>
+    		   <input class="inputClass" type="text" name="telephoneNo" value=""> </input> 
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Cell No: </label>
+    </td>
+    <td>
+    		   <input class="inputClass" type="text" name="cellNo" value=""> </input> 
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Email: </label>
+    </td>
+    <td>
+    		    <input class="inputClass" type="text" name="email" value=""> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Home Address: </label>
+    </td>
+    <td>
+    		   <input class="inputClass" name="homeAddress"> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Country </label>
+    </td>
+    <td>
+    		  <select class="inputClass" name="studentCountry">
+					    <option value="Pakistan">Pakistan</option>
+  						<option value="India">India</option>
+  						<option value="USA">U.S.A</option>
+  
+			</select> 
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Postal Code: </label>
+    </td>
+    <td>
+    		  <input class="inputClass" type="text" name="studentPostalCode" value=""> </input> 
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		
+				<label class="labelClass"> Date of Birth: </label>
+    </td>
+    <td>
+    		 <input class="inputClass" type="date" name="dOB" value=""> </input>
+    </td>    
+</tr>
+
+</table>
+
+</div> <!-- End of 2nd Table DIV -->
+
+		<!-- <input id="saveBtn" type="submit" value="Submit"> </input> -->
+		 <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		 
+
+</form>
+
+
+
+	<button class="saveBtn" id="cancelPD" > <img th:src="@{/resources/Interface/icons/close3.png}" /></button> <br/><br/><br/><br/><br/>
+
+
+</div>
+
+<div th:if="${currentStudy != null}">
+      
+        
+
+
+<div id="gdDiv" align="center" style="display:none;">
+
+<h1> General Details  </h1> 
+<br/><br/><br/>
+<form th:action="@{saveCurrentStudies}">
+
+<!-- <br/>
+<h3> Current Studies (if any)</h3> -->
+
+<input type="hidden" name="generalDetailId.generalDetailId"
+ th:value="${currentStudy.generalDetailId.generalDetailId}" />
+ 
+<input  type="hidden" th:name="currentStudy.currentStudyId"
+			 	th:value="${currentStudy.currentStudiesId}" /> <br/>
+			 	
+
+<div id="first" style="float: left;"> 
+
+<table>
+
+<tr>
+	<td>
+    		<label class="labelClass"> Program Title:  </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="text" name="programTitle" th:value="${currentStudy.programTitle}"> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass">  University:   </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="text" name="university" th:value="${currentStudy.university}"> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		<label class="labelClass">   City:   </label>
+    </td>
+    <td>
+    		<select name="city">
+					<option th:each="city : ${cityList}" th:selected="(${city.cityName} == ${currentStudy.city}) ? 'selected'" 
+					th:value="${city.cityId}" th:text="${city.cityName}" >
+					</option>
+			</select>
+    </td>    
+</tr>
+
+
+
+<tr>
+	<td>
+    		<label class="labelClass">    Country:   </label>
+    </td>
+    <td>
+    		<select name="country">
+ 				 <option th:each="country : ${countryList}" th:selected="(${country.countryName} == ${currentStudy.country}) ? 'selected'" 
+ 				 th:value="${country.countryId}" th:text="${country.countryName}" >
+ 				 </option>  
+			</select> 
+    </td>    
+</tr>
+
+
+
+</table>
+
+</div>			 	
+
+
+<div id="second">
+
+<table>
+
+	
+	<tr>
+	<td>
+    		<label class="labelClass"> Start Date:   </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="date" name="startDate" th:value="${currentStudy.startDate}"> </input>
+    </td>    
+</tr>
+	
+	
+<tr>
+	<td>
+    		<label class="labelClass"> End Date:   </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="date" name="endDate" th:value="${currentStudy.endDate}"> </input>
+    </td>    
+</tr>
+	
+	
+<tr>
+	<td>
+    		<label class="labelClass"> Highest Level of Qualification:    </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="text" name="higherLevelOfQualification" th:value="${currentStudy.higherLevelOfQualification}"> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		<label class="labelClass">  Expected Date of Completion    </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="date" name="expectedDateOfCompletion" th:value="${currentStudy.expectedDateOfCompletion}"> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass">  Have you studied abroad before?    </label>
+    </td>
+    <td>
+    		<input type="radio" name="haveStudiedAbroad" th:checked="${currentStudy.haveStudiedAbroad} == true ? 'checked'" value="1">yes</input>
+			<input type="radio" name="haveStudiedAbroad" th:checked="${currentStudy.haveStudiedAbroad } == false ? 'checked'" value="0">no</input> <br/>
+
+    </td>    
+</tr>
+
+
+</table>
+
+</div>
+
+	<!-- <input type="submit" value="submit"> </input> -->
+	<button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+
+</form>
+
+
+	<button class="saveBtn" id="cancelGD"> <img th:src="@{/resources/Interface/icons/close3.png}"/> </button> <br/>
+
+</div>
+
+</div>
+<div th:if="${currentStudy == null}" id="gdDiv" align="center" style="display:none;">
+
+<h1> General Details  </h1> 
+
+<br/><br/><br/>
+
+<form th:action="@{saveCurrentStudies}">
+
+<!-- <br/>
+<h3> Current Studies (if any)</h3> -->
+
+<input type="hidden" disabled="disabled" name="generalDetailId.generalDetailId" th:value="${id}" /> <!-- HIDDEN FIELD -->
+
+
+<div id="first" style="float: left;"> 
+
+<table>
+
+
+<tr>
+	<td>
+    		<label class="labelClass"> Program Title: </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="text" name="programTitle" value=""> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass"> University:</label>
+    </td>
+    <td>
+    		<input class="inputClass" type="text" name="university" value=""> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass"> City:</label>
+    </td>
+    <td>
+    		<select name="city">
+				<option th:each="city : ${cityList}" th:value="${city.cityId}" th:text="${city.cityName}" ></option>
+			</select>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass"> Country:</label>
+    </td>
+    <td>
+    		<select name="country">
+				<option th:each="country : ${countryList}" th:value="${country.countryId}" th:text="${country.countryName}" ></option>
+			</select>
+
+    </td>    
+</tr>
+
+
+
+</table>
+
+</div>
+
+
+
+<div id="second"> 
+
+<table>
+
+<tr>
+	<td>
+    		<label class="labelClass"> Start Date:</label>
+    </td>
+    <td>
+    		<input class="inputClass" type="date" name="startDate" value=""> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass">  End Date:</label>
+    </td>
+    <td>
+    		<input class="inputClass" type="date" name="endDate" value=""> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass">  Highest Level of Qualification: </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="text" name="higherLevelOfQualification" value=""> </input>
+    </td>    
+</tr>
+
+
+<tr>
+	<td>
+    		<label class="labelClass">  Expected Date of Completion: </label>
+    </td>
+    <td>
+    		<input class="inputClass" type="date" name="expectedDateOfCompletion" value=""> </input>
+    </td>    
+</tr>
+
+<tr>
+	<td>
+    		<label class="labelClass">   Have you studied abroad before? </label>
+    </td>
+    <td>
+    		<input type="radio" name="haveStudiedAbroad" value="yes">yes</input>
+			<input type="radio" name="haveStudiedAbroad" value="no">no</input> 
+    </td>    
+</tr>
+
+
+
+</table>
+
+</div>
+
+
+
+	<!-- <input type="submit" value="submit"> </input> -->
+	<button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+
+</form>
+
+<button class="saveBtn" id="cancelGD"> <img th:src="@{/resources/Interface/icons/close3.png}"/> </button> <br/><br/><br/><br/>
+
+
+
+</div>
+        	
+         
+
+
+<div id="posDiv" align="center" style="display:none;">
+
+<h1> Program Of Study  </h1> 
+
+<br/><br/><br/>
+
+<form th:action="@{/saveProgramOfStudy}" method="get" modelAttribute="programOfStudyList">
+	<div id="itemRowsPOS">
+
+	<div th:else="${#lists.isEmpty(programOfStudyList)}">
+		<div id="repeat" th:each="programOfStudy : ${programOfStudyList}">
+		
+			<input  type="hidden" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].generalDetailId.generalDetailId'" 
+	   		th:value="${programOfStudy.generalDetailId.generalDetailId}" />
+	
+		 	<input type="hidden" th:name="'referenceList[' +${programOfStudyStat.index}+ '].referenceId'"
+			 	th:value="${programOfStudy.programOfStudyId}" /> <br/>
+			 	
+	<div id="first" style="float: left;">
+		
+		<table>
+		
+				<tr>
+					<td>
+    					<label class="labelClass"> Awarding Body: </label>
+    				</td>
+   				    <td>
+    					<input class="inputClass" type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].awardingBody'" th:value="${programOfStudy.awardingBody}"  />
+    				</td>    
+				</tr>
+				
+				
+				<tr>
+					<td>
+    					<label class="labelClass"> Title of Course: </label>
+    				</td>
+   				    <td>
+    					<input class="inputClass" type="text" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].titleOfCourse'" th:value="${programOfStudy.titleOfCourse}" />
+    				</td>    
+				</tr>
+			
+			</table>
+		</div>  <!-- END OF 1st div -->
+		
+		<div id="second"> 
+				
+				<table>
+				
+				<tr>
+					<td>
+    					<label class="labelClass">  Start Date: </label>
+    				</td>
+   				    <td>
+    					<input class="inputClass" type="date" th:name="'programOfStudyList[' +${programOfStudyStat.index}+ '].startDate'" th:value="${programOfStudy.startDate}"/> 
+    				</td>    
+				</tr>
+				
+				
+				<tr>
+					<td>
+    					<label class="labelClass"> Year of Entry: </label>
+    				</td>
+   				    <td>
+    					<input class="inputClass" type="text" th:name="'programOfStudyList[' + ${programOfStudyStat.index} + '].yearOfEntry'" th:value="${programOfStudy.yearOfEntry}" />
+    				</td>    
+				</tr>
+				
+		
+		</table>  
+	
+				<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+	
+	</div>		 <!-- END OF 2nd div -->	
+
+	  
+
+		</div>
+	</div>
+	
+		<div th:if="${#lists.isEmpty(programOfStudyList)}">
+			<input id="idPOS" type="hidden" name="programOfStudyList[1].generalDetailId.generalDetailId" th:value="${id}" /> <!-- HIDDEN FIELD -->
+		  
+		  
+		  <div id="first" style="float: left;">
+		  		<table>
+		  		
+		  				<tr>
+							<td>
+    								<label class="labelClass"> Awarding Body: </label>
+   						   </td>
+   						 	<td>
+    							<input class="inputClass" type="text" name="programOfStudyList[1].awardingBody"  />
+    						</td>    
+						</tr>
+						
+							
+		  				<tr>
+							<td>
+    								<label class="labelClass"> Title of Course: </label>
+   						   </td>
+   						 	<td>
+    							<input class="inputClass" type="text" name="programOfStudyList[1].titleOfCourse" />
+    						</td>    
+						</tr>
+				</table>
+		 </div> <!-- END OF 1st div -->
+					
+					
+				<div id="second">
+				
+					<table>	
+						
+						<tr>
+							<td>
+    								<label class="labelClass"> Start Date: </label>
+   						   </td>
+   						 	<td>
+    							<input class="inputClass" type="date" name="programOfStudyList[1].startDate" /> 
+    						</td>    
+						</tr>
+						
+						
+						<tr>
+							<td>
+    								<label class="labelClass"> Year of Entry: </label>
+   						   </td>
+   						 	<td>
+    							<input class="inputClass" type="text" name="programOfStudyList[1].yearOfEntry" />
+    						</td>    
+						</tr>
+		  				
+		  		
+		  		
+		  		</table>
+		  			<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+		  	
+		  
+		  </div>  <!-- END OF 2nd div -->
+		  
+		   
+   		</div>
+    
+<br/><br/><br/>
+
+   <!--  <input onClick="addRowPOS(this.form);" type="button" th:src="@{/resources/Interface/icons/addMore2.png}" value="" />  -->
+	<!-- <input type="submit" value="Submit"> </input> -->
+	
+	</div>
+	  <button class="saveBtn" onClick="addRowPOS(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+	
+	<button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	
+    
+	</form>
+
+<button class="saveBtn" id="cancelPOS"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/>
+
+</div>
+
+
+
+<div id="languageDiv" align="center" style="display:none;">
+
+<h1> Language Details </h1> 
+
+<br/><br/><br/>
+
+<form th:action="@{saveLanguageDetail}">
+ <!-- <h3>Enter the details of other Language(s) Test if any: </h3>
+ -->	
+<div th:if="${#lists.isEmpty(languageList)}" id="itemRowsLang">
+    
+	<input id="idLD" type="hidden" name="languageList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	
+	<div id="first" style="float: left;"> 
+		
+			<table>
+				<tr>
+					<td>
+    					 	<label class="labelClass"> Test Name: </label>
+    				</td>
+ 				    <td>
+    						 <input type="text" name="languageList[0].testName"  />
+    				</td>     
+			   </tr>
+			   
+			   <tr>
+					<td>
+    					 	<label class="labelClass"> Test Score: </label>
+    				</td>
+ 				    <td>
+    						 <input type="text" name="languageList[0].testScore" />
+    				</td>     
+			   </tr>
+			   
+			  </table>
+	</div>
+			   
+	<div id="second"> 
+	
+		<table>
+
+			 <tr>
+					<td>
+    					 	<label class="labelClass"> Test Date: </label>
+    				</td>
+ 				    <td>
+    						   <input type="date" name="languageList[0].validityDate" />
+    				</td>     
+			   </tr>
+			   
+			  <tr>
+					<td>
+    					 	<label class="labelClass"> Validity Date: </label>
+    				</td>
+ 				    <td>
+    						   <input type="date" name="languageList[0].validityDate" />
+    				</td>     
+			   </tr>
+
+			
+			</table>
+			
+			<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+	</div>
+	
+
+    <!-- <input onClick="addRowLang(this.form);" type="button" value="Add More" />
+    <input type="submit" value="Submit"> </input> -->
+    
+ 
+    
+</div>
+
+<div th:else="${#lists.isEmpty(languageList)}" id="itemRowsLang">
+
+    <div th:each="language : ${languageList}">
+    	 <input type="hidden" th:name="'language[' +languageStat.index+ '].generalDetailId.generalDetailId'"
+    	 th:value="${language.generalDetailId.generalDetailId}" />
+    	  	<input type="hidden" th:name="'languageList[' +${languageStat.index}+ '].referenceId'"
+			 	th:value="${language.languageDetailId}" /> <br/>
+			 	
+	<div id="first" style="float: left;">
+	
+		<table>
+		
+				<tr>
+					<td>
+    					 	<label class="labelClass"> Test Name: </label>
+    				</td>
+ 				    <td>
+    						 <input type="text" th:name="'language[' +languageStat.index+ '].testName'"
+    							 th:value="${language.testName}" />
+    				</td>     
+			   </tr>
+			   
+			   <tr>
+					<td>
+    					 	<label class="labelClass"> Test Score: </label>
+    				</td>
+ 				    <td>
+    						 <input type="text" th:name="'language[' +languageStat.index+ '].testScore'"
+    							 th:value="${language.testScore}" />
+    				</td>     
+			   </tr>
+			   
+		</table>
+	</div>
+		
+		<div id="second"> 
+			
+			<table>
+			
+			  <tr>
+					<td>
+    					 	<label class="labelClass"> Test Date: </label>
+    				</td>
+ 				    <td>
+    						Validity Date <input type="date" th:name="'language[' +languageStat.index+ '].validityDate'"
+    						 th:value="${language.validityDate}"/> 
+    				</td>     
+			   </tr>
+			   
+			  <tr>
+					<td>
+    					 	<label class="labelClass"> Validity Date: </label>
+    				</td>
+ 				    <td>
+    						   <input type="date" name="languageList[0].validityDate" />
+    				</td>     
+			   </tr>
+
+		
+		</table>
+		
+			<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+		</div> <!-- 2nd Table Div -->
+	
+	</div><!-- Each Language Div -->
+</div>		<!-- ELSE Language Div -->   
+		  
+	
+   <!--  <input onClick="addRowLang(this.form);" type="button" value="Add More" />
+    <input type="submit" value="Submit"> </input> -->
+    
+      <button class="saveBtn" onClick="addRowLang(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+	 <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	 
+	 </form>	
+	 
+	 <!-- <button id="cancelLang"> cancel</button> <br/> -->
+<button class="saveBtn" id="cancelLang"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/><br/><br/>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="eduDiv" align="center" style="display:none;">  <!-- EDUCATION Div Start -->
+
+<form th:action="@{saveEducationalDetail}" >
+<div id="itemRows">
+<h1> Educational Details  </h1> 
+<br/><br/><br/>
+
+	<div th:else="${#lists.isEmpty(educationalDetailList)}" id="itemRows"> <!-- EDUCATION ELSE Div Start -->
+	
+		<div th:each="educationalDetail : ${educationalDetailList}"> <!-- EDUCATION EACH Div Start -->
+		
+			 <input type="hidden" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].generalDetailId.generalDetailId'"
+			 th:value="${educationalDetail.generalDetailId.generalDetailId}" />
+			  	<input type="hidden" th:name="'referenceList[' +${educationalDetailStat.index}+ '].referenceId'"
+			 	th:value="${educationalDetail.educationalDetailId}" /> <br/>
+			 	
+			 	
+		<div id="first" style="float: left;">
+		 
+			<table>
+						
+					<tr>
+						<td>
+    							<label class="labelClass"> Institute Name: </label>
+   					    </td>
+  						<td>
+    						<input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].instituteName'"
+							 th:value="${educationalDetail.instituteName}"/>
+  					    </td>     
+					</tr>
+					
+					<tr>
+						<td>
+    							<label class="labelClass"> Address </label>
+   					    </td>
+  						<td>
+    						<input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].instituteName'"
+							 th:value="${educationalDetail.instituteName}"/>
+  					    </td>     
+					</tr>
+
+					
+					<tr>
+						<td>
+    							<label class="labelClass"> Degree: </label>
+   					    </td>
+  						<td>
+    						 <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].degreeName'"
+		  					  th:value="${educationalDetail.degreeName}" />
+  					    </td>     
+					</tr>
+					
+			</table>
+		</div>
+		
+		<div id="second">
+		
+			<table>
+			
+			<tr>
+						<td>
+    							<label class="labelClass"> Subject: </label>
+   					    </td>
+  						<td>
+    						<input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].subject'"
+		 					   th:value="${educationalDetail.subject}" />
+  					    </td>     
+					</tr>
+					
+					
+				<tr>
+						<td>
+    							<label class="labelClass">  Grade Awarded: </label>
+   					    </td>
+  						<td>
+    						<input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].gradeAwarded'"
+		   						 th:value="${educationalDetail.gradeAwarded}" />
+  					    </td>     
+				</tr>
+				
+				<tr>
+						<td>
+    							<label class="labelClass">  Date Awarded: </label>
+   					    </td>
+  						<td>
+    						  <input type="text" th:name="'educationalDetailList[' +${educationalDetailStat.index}+ '].dateAwarded'"
+		    					th:value="${educationalDetail.dateAwarded}" />
+  					    </td>     
+					</tr>
+				
+			
+			</table>
+			
+				<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+				
+		</div>	 	
+					
+	  
+		  <!--  <input onClick="addRow(this.form);" type="button" value="Add More" /> 
+			<input type="submit" value="Submit"> </input> -->
+		
+
+		</div> <!-- EDUCATION EACH Div End -->
+	
+	</div> <!-- EDUCATION ELSE Div End -->
+
+	<div th:if="${#lists.isEmpty(educationalDetailList)}" id="itemRows">
+	
+	<input id="idED" type="hidden" name="educationalDetailList[0].generalDetailId.generalDetailId" th:value="${id}" />
+	
+	
+	<div id="first" style="float: left;">
+	
+		<table>
+			
+				<tr>
+						<td>
+    							<label class="labelClass"> Institute Name: </label>
+   					    </td>
+  						<td>
+    						<input type="text" name="educationalDetailList[0].instituteName"  />
+  					    </td>     
+			   </tr>
+			   
+			   
+			   <tr>
+						<td>
+    							<label class="labelClass"> Address: </label>
+   					    </td>
+  						<td>
+    						<input type="text" name="educationalDetailList[0].instituteName"  />
+  					    </td>     
+			   </tr>
+			   
+			   
+			   <tr>
+						<td>
+    							<label class="labelClass"> Degree: </label>
+   					    </td>
+  						<td>
+    						<input type="text" name="educationalDetailList[0].degreeName" />
+  					    </td>     
+			   </tr>
+			   
+			   
+			   
+			   
+		</table>
+	</div>		
+		
+		<div id="second">
+		
+		<table> 
+			
+				 <tr>
+						<td>
+    							<label class="labelClass"> Subject: </label>
+   					    </td>
+  						<td>
+    						<input type="text" name="educationalDetailList[0].subject" />
+  					    </td>     
+			   </tr>
+		   
+			   <tr>
+						<td>
+    							<label class="labelClass"> Grade Awarded: </label>
+   					    </td>
+  						<td>
+    						 <input type="text" name="educationalDetailList[0].gradeAwarded" />
+  					    </td>     
+			   </tr>
+			   
+			   
+			     <tr>
+						<td>
+    							<label class="labelClass">  Date Awarded: </label>
+   					    </td>
+  						<td>
+    						  <input type="text" name="educationalDetailList[0].dateAwarded" />
+  					    </td>     
+			   </tr>
+				
+				
+		
+		</table>
+		
+			<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+
+	</div> <!--  2nd Table Div Ends -->
+	
+	
+	 
+	  <!-- <input onClick="addRow(this.form);" type="button" value="Add More" /> 
+	  <input type="submit" value="Submit"> </input>
+	 -->
+
+	</div> <!-- If isEmpty Education Div Ends -->
+	
+</div> <!-- id="itemRows" Ends -->
+	
+	 <button class="saveBtn" onClick="addRow(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+	 <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	
+    
+	</form>
+
+<!-- <button id="cancelEDU"> cancel</button> <br/> -->
+<button class="saveBtn" id="cancelEDU"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/>
+
+
+</div> <!-- EDUCATION Div Endzzzzzzzzzzzzzzzzz -->
+
+
+
+
+<div id="workExpDiv" align="center" style="display:none;">  <!-- WORK EXPERIENCE DIV START -->
+
+<h1> Work Experience Details  </h1> 
+
+<br/> <br/> <br/>
+
+<form th:action="@{saveWorkExperience}" method="get">
+	<div id="itemRowsWorkExp">
+
+	<div th:else="${#lists.isEmpty(workExperienceList)}" id="itemRowsWorkExp"><!-- WORK EXPERIENCE ELSE DIV START -->
+	
+		<div th:each="workExperience : ${workExperienceList}">  		      <!-- WORK EXPERIENCE EACH DIV START -->
+		<!--not null-->
+		
+		
+			 <input type="hidden" th:name="'workExperienceList[' +workExperienceStat.index+ '].generalDetailId.generalDetailId'"
+			 th:value="${workExperience.generalDetailId.generalDetailId}" />
+			  	<input type="hidden" th:name="'referenceList[' +${workExperienceStat.index}+ '].referenceId'"
+			 	th:value="${workExperience.workExperienceId}" /> <br/>
+			 	
+			 	
+			 	
+	<div id="first" style="float: left;">
+		<table>
+				<tr>
+					<td>
+    					<label class="labelClass"> Organization:</label>
+    				</td>
+   					 <td>
+    					<input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].organization'"
+		  					   th:value="${workExperience.organization}" placeholder="e.g Google Inc."/>
+    				</td>
+    		   </tr>
+    		   
+    		   <tr>
+					<td>
+    					<label class="labelClass">  Designation:</label>
+    				</td>
+   					 <td>
+    					<input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].designation'"
+		     				th:value="${workExperience.designation}" placeholder="e.g Software Analyst"/>
+    				</td>
+    		   </tr>
+    		   
+    		  
+    		   <tr>
+					<td>
+    					<label class="labelClass">  Duties:</label>
+    				</td>
+   					 <td>
+    					  <input type="text" th:name="'workExperienceList[' +workExperienceStat.index+ '].duties'"
+		    				 th:value="${workExperience.duties}" placeholder="Responsibilites" /> 
+    				</td>
+    		   </tr>
+				
+				
+				 <tr>
+					<td>
+    					<label class="labelClass">  Date:(From):</label>
+    				</td>
+   					 <td>
+    					 <input type="date" th:name="'workExperienceList[' +workExperienceStat.index+ '].startDate'"
+						 th:value="${workExperience.startDate}" /> 
+    				</td>
+    		   </tr>
+    		   
+    		   
+    		    <tr>
+					<td>
+    					<label class="labelClass">  Date:(To):</label>
+    				</td>
+   					 <td>
+    					 <input type="date" th:name="'workExperienceList[' +workExperienceStat.index+ '].endDate'"
+		   				  th:value="${workExperience.endDate}" />
+    				</td>
+    		   </tr>
+				
+				
+				
+		
+		</table>
+	
+	
+	</div> <!-- 1st Table Div Ends -->
+			 	
+		   <!--  <input onClick="addRowWorkExp(this.form);" type="button" value="Add More" /> 
+			<input type="submit" value="Submit"> </input> -->
+			
+		</div>  <!-- WORK EXPERIENCE EACH DIV End -->
+	</div>	<!-- WORK EXPERIENCE ELSE DIV End -->
+	
+	<div th:if="${#lists.isEmpty(workExperienceList)}" id="itemRowsWorkExp">  <!-- WORK EXPERIENCE IF isEmpty DIV Start -->
+	<!-- is nulll  -->
+	
+		<input id="idWED" type="hidden" name="workExperienceList[0].generalDetailId.generalDetailId" th:value="${id}" />
+		
+		<div id="first">
+				
+				<table>
+				      <tr>
+							<td>
+    								<label class="labelClass">   Organization:</label>
+    						</td>
+   						 	<td>
+    								<input type="text" name="workExperienceList[0].organization" placeholder="e.g Google Inc." />
+    						</td>
+    		  		 </tr>
+    		  		 
+    		  		 
+    		  		 <tr>
+							<td>
+    								<label class="labelClass">    Designation:</label>
+    						</td>
+   					 		<td>
+    								 <input type="text" name="workExperienceList[0].designation" placeholder="e.g Software Analyst" />
+    						</td>
+    		  		 </tr>
+    		  		 
+    		  		 <tr>
+							<td>
+    								<label class="labelClass">   Duties:</label>
+    						</td>
+   					 		<td>
+    								  <input type="text" name="workExperienceList[0].duties" placeholder="Responsibilites" /> 
+    						</td>
+    		  		 </tr>
+    		  		 
+    		  		 
+    		  		  <tr>
+							<td>
+    								<label class="labelClass">   Date:(From)</label>
+    						</td>
+   					 		<td>
+    							  	 <input type="date" name="workExperienceList[0].startDate"  />
+    						</td>
+    		  		 </tr>
+    		  		 
+    		  		 
+    		  		   <tr>
+							<td>
+    								<label class="labelClass">      Date:(To) </label>
+    						</td>
+   					 		<td>
+    							  <input type="date" name="workExperienceList[0].endDate" />
+    						</td>
+    		  		 </tr>
+				
+				
+					
+				
+				</table>
+			
+				<br/><br/>
+				<p>----------------------------------------------------------------------</p>
+		</div> <!-- 2nd Table DIV -->
+		
+	   
+	  <!--   <input onClick="addRowWorkExp(this.form);" type="button" value="Add More" /> 
+		<input type="submit" value="Submit"> </input> -->
+		
+		
+	</div> <!-- WORK EXPERIENCE IF isEmpty DIV End -->
+</div>  <!-- id="itemRowsWorkExp" DIV Ends -->
+
+		
+		  <button class="saveBtn" onClick="addRowWorkExp(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+		  <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		
+    
+	</form>
+
+<!-- <button id="cancelworkEXP"> cancel</button> <br/> -->
+
+
+  <button class="saveBtn" id="cancelworkEXP"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/>
+
+
+</div>
+
+
+
+
+
+
+<div id="psDiv" align="center" style="display:none;">
+
+<h1> Personal Statement </h1> 
+<br/><br/><br/>
+<form th:action="@{savePersonalDetail}">
+
+	
+	<div th:if="${personalStatement == null}">
+	
+		 <input type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" />  <!-- MISTAKE -->
+		<!-- <textarea type="text" name="personalStatement" maxlength="1050">
+		Enter text here...</textarea> <br/> -->
+		
+		<div id="first" style="float: left;">
+		
+			<table>
+					<tr>
+						<td>
+    						<label class="labelClass"> Your Personal Statement: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input style="width:400px; height:50px;" class="inputClass" type="text" name="personalStatement" placeholder="Personal Statement" />
+    			 	    </td>     
+				   </tr>
+				   
+			
+			</table> 
+		
+		</div>
+		
+			
+		<!-- <input  type="submit" value="Save" />
+		<button id="cancelPS"> cancel</button> <br/> -->
+		 <!--  <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		  <button class="saveBtn" id="cancelPS"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/> -->
+	</div>
+	
+	<div th:if="${personalStatement != null}">
+	
+		<input type="hidden" th:name="${personalStatement.generalDetailId.generalDetailId}" th:value="${id}" />
+		
+		<div id="first" style="float: left;">
+			
+			<input type="hidden" disabled="disabled" name="personalStatementId" th:value="${personalStatement.personalStatementId}" />
+			
+				<table>
+						<tr>
+							<td>
+    							<label style="width:400px; height:50px;" class="labelClass"> Your Personal Statement: </label>
+    			   			</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text" name="personalStatement" th:value="${personalStatement.personalStatement}" />
+    			 	    </td>     
+				   </tr>
+				</table>
+				
+		
+		</div>
+	
+	
+		<!-- <textarea rows="4" cols="50" name="personalStatement" th:value="${personalStatement.personalStatement}" maxlength="1050">
+		Enter text here...</textarea> <br/> -->
+		
+		
+		
+		<!-- <input  type="submit" value="Save" />
+		<button id="cancelPS"> cancel</button> <br/> -->
+	
+	</div>
+	
+	 <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+		  <button class="saveBtn" id="cancelPS"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/>
+
+
+
+</form>
+</div>
+
+
+
+
+
+<div id="refDiv" align="center" style="display:none;">
+
+<h1> References </h1> 
+<br/> <br/> <br/>
+
+<form th:action="@{saveReference}" method="get">
+<div id="itemRowsREF">
+
+	
+	<div th:else="${#lists.isEmpty(referenceList)}" id="itemRowsREF">
+		<div th:each="reference : ${referenceList}">
+		
+			 <input type="hidden" th:name="'referenceList[' +${referenceStat.index}+ '].generalDetailId.generalDetailId'"
+			 	th:value="${id}" />
+			 	<input type="hidden" th:name="'referenceList[' +${referenceStat.index}+ '].referenceId'"
+			 	th:value="${reference.referenceId}" /> 
+			 	
+			
+		<div id="first" style="float: left;">  
+			 <table>
+			 	<tr>
+						<td>
+    							<label  class="labelClass"> Name: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  th:name="'referenceList[' +${referenceStat.index}+ '].name'"
+								th:value="${reference.name}" />
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="labelClass"> Designation: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  th:name="'referenceList[' +${referenceStat.index}+ '].designation'"
+		    					th:value="${reference.designation}" />
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class="labelClass"> Relationship: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"   th:name="'referenceList[' +${referenceStat.index}+ '].relationship'"
+		    					th:value="${reference.relationship}" />
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="labelClass"> Address: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"   th:name="'referenceList[' +${referenceStat.index}+ '].address'"
+		   						th:value="${reference.address}" />
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="labelClass"> 	Contact (M): </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  th:name="'referenceList[' +${referenceStat.index}+ '].mobileContact'"
+		   						th:value="${reference.mobileContact}" />
+    			 	    </td>     
+			    </tr>
+			 </table>
+			 
+		</div>
+		
+		<div id="second"> 
+			    
+			 <table>
+			     <tr>
+						<td>
+    							<label  class="labelClass"> 	Contact (O): </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  th:name="'referenceList[' +${referenceStat.index}+ '].otherContact'"
+		   						th:value="${reference.otherContact}" />
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class="labelClass"> 	FAX: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"   name="'referenceList[' +${referenceStat.index}+ '].fax'"
+		   						th:value="${reference.fax}" />
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class="labelClass"> 	Email: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="'referenceList[' +${referenceStat.index}+ '].email'"
+		    				th:value="${reference.email}" /> 
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="labelClass"> 	Years known: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="'referenceList[' +${referenceStat.index}+ '].yearsKnown'"
+		    				th:value="${reference.yearsKnown}" />
+    			 	    </td>     
+			    </tr>
+			    
+			    
+			    
+			 </table>
+			 <br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	</div>		
+	<br/><br/>	
+
+		    
+		  <!--   <input onClick="addRowREF(this.form);" type="button" value="Add More" /> 
+			<input type="submit" value="Submit"> </input> -->
+		
+		</div> <!-- EACH  -->
+	</div> <!-- ELSE -->
+	
+	<!-- <button class="saveBtn" onClick="addRowREF(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+		  <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button> -->
+		  
+		  
+
+	<div th:if="${#lists.isEmpty(referenceList)}" id="itemRowsREF">
+
+	<input id="idREF" type="hidden" name="referenceList[0].generalDetailId.generalDetailId" th:value="${id}" />	
+	
+	<div id="first" style="float: left;">
+	
+		<table>
+		
+				<tr>
+						<td>
+    							<label  class="labelClass"> Name: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].name"  />
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="labelClass"> Designation: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].designation" />
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class="labelClass"> Relationship: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].relationship" />
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="labelClass"> Address: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].address" />
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="labelClass"> 	Contact (M): </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].mobileContact" />
+    			 	    </td>     
+			    </tr>
+			    
+		</table>
+	</div>
+	
+		<div id="second"> 			  
+			    
+			 <table>
+			     <tr>
+						<td>
+    							<label  class="labelClass"> 	Contact (H): </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].otherContact" />
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class="labelClass"> 	FAX: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].fax" /> 
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class="labelClass"> 	Email: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].email" />  
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="labelClass"> 	Years known: </label>
+    			   		</td>
+    			   		
+    					<td>
+    						<input class="inputClass" type="text"  name="referenceList[0].yearsKnown" />  
+    			 	    </td>     
+			    </tr>
+				
+		
+		</table>
+			 <br/><br/><br/>
+				<p>----------------------------------------------------------------------</p>
+	
+	</div> <!-- 2nd Table -->
+	
+</div> <!-- IF isEmpty Check -->  
+</div> <!-- ITEM ROWWW DIV ENS -->  	
+   
+<!--     <input onClick="addRowREF(this.form);" type="button" value="Add More" /> 
+	<input type="submit" value="Submit"> </input> -->
+	
+	 	  <button class="saveBtn" onClick="addRowREF(this.form);" type="button"> <img th:src="@{/resources/Interface/icons/addMore2.png}" /> </button>
+		  <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+	
+	</form>
+
+<!-- <button id="cancelREF"> cancel</button> <br/> -->
+ <button class="saveBtn" id="cancelREF"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button> <br/><br/><br/><br/><br/><br/>
+
+</div>
+
+
+
+<div id="declareDiv" align="center" style="display:none;">
+
+<h1> Declaration </h1> 
+<br/><br/><br/>
+<form>
+
+
+
+<input type="hidden" name="generalDetailId.generalDetailId" th:value="${id}" />
+
+<div id="first" style="float: left;"> 
+
+	<table>
+			
+			<tr>
+						<td>
+    							<label  class=""> 	Please indicate how you heard about the course you have applied for. </label>
+    			   		</td>
+    			   		
+    					<td>
+    						  
+    						<input type="radio" name="hear" value="yes"> Family</input>
+							<input type="radio" name="hear" value="no"> Friend</input> 
+							<input type="radio" name="hear" value="yes"> Innternet</input>
+							<input type="radio" name="hear" value="no"> Exibition</input> 
+							<input type="radio" name="hear" value="yes"> Open Day</input>
+							<input type="radio" name="hear" value="no">  Agent</input> 
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			   	<tr>
+						<td>
+    							<label  class=""> 	Other (please specify) </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="hear" value=""></input> 
+    						
+    			 	    </td>     
+			    </tr> 	
+			    
+			    <tr>
+						<td>
+    							<label  class=""> 	Under the Data Protection Act 1998.</label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="hidden" name="hear" value=""></input> <br/>
+    						
+    			 	    </td>     
+			    </tr> 	
+			    
+			     <tr>
+						<td>
+    							<label  class=""> 	 I </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="Your Name Here ...." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			    
+			      <tr>
+						<td>
+    							<label  class="">  S/O </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="Your Father's Name..." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr> 
+			    
+			      <tr>
+						<td>
+    							<label  class="">  Holder of </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="Holder Of..." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr> 	
+			    
+			      <tr>
+						<td>
+    							<label  class="">  Pakistani Passport number </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="Your Passport No." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr> 	
+				
+				<tr>
+						<td>
+    							<label  class="">  Resident of </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="Your Permanent Address" > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr> 
+			    
+			    <tr>
+						<td>
+    							<label  class="">  I do hereby declare on solemn affirmation as under following Points: </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<p>1.      That I am the deponent of this affidavit and am well conversant with the facts citied herein. </p><br/>
+    							<p>2.      That all the documents, which I submitted on my behalf, are true and correct. </p><br/>
+    							<p>3.      That I am not involved in any political or religious affairs nor am I connected with any criminal group activity. Moreover, I do not belong  any terrorist organization. </p><br/>
+    							<p>4.      That I have never been convicted by any court of law, Police department or any other Government department in Pakistan Police report attached. </p><br/>
+    			 	    		
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class=""> 5.      That I am going to </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="Country Name" > </input><br/><br/>
+    							<p>for higher studies</p>
+    			 	    </td>     
+			    </tr> 
+			    
+			    <tr>
+						<td>
+    							<label  class="">  6.      That I have applied for study permit in  </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="College/Uni" > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr> 
+			    
+			     <tr>
+						<td>
+    							<label  class=""> 7.      That as per policy of </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="...." > </input>
+    							<p>high commission I have the required funds for my study in</p>
+    							<input type="text" name="" value="" placeholder="...." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			     <tr>
+						<td>
+    							<label  class=""> 8.  That I will be regular in classes and will not join any subversive activities in </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="...." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="">9.      That I will obey the Rules and Regulations in </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="text" name="" value="" placeholder="...." > </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="">10.  That I will have good behavior with all my classmates. </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="hidden" name="" value=""> </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			      <tr>
+						<td>
+    							<label  class="">11.     I shall be liable to pay all the consultation fee to my consultant by all means i.e Amount in Rs: </label>
+    			   		</td>
+    			   		
+    					<td>
+    							<input type="hidden" name="" value="" placeholder="Amount Payable"> </input><br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+			    
+			    <tr>
+						<td>
+    							<label  class="">  That whatever stated above is true to the best of my knowledge and belief and nothing has been concealed. </label>
+    			   		</td>
+    			   		
+    					<td>
+    							    <p>Appicants Signature:</p>
+    							    <input type="text" name="signature" placeholder="Signature" ></input> <br/><br/>
+   									<p>Appicants NIC:</p>
+   									<input type="text" name="nic" placeholder="N.I.C" ></input> <br/><br/>
+    								<p>Date:</p>
+    								 <input type="date" name="signature"></input> <br/><br/>
+    						
+    			 	    </td>     
+			    </tr>
+	
+	
+	</table>
+
+
+	<!--      <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+ -->
+    
+</div> <!-- id-"first" DIV Endssss -->
+
+</form>
+
+<!-- <button id="cancelDEC"> cancel</button> <br/>
+<button onclick="myFunction()">Print Declaration</button>
+ -->
+   <button class="saveBtn" type="submit"> <img th:src="@{/resources/Interface/icons/save3.png}" /> </button>
+<button class="saveBtn" id="cancelDEC"> <img th:src="@{/resources/Interface/icons/close3.png}"/></button>
+<button class="saveBtn" onclick="myFunction()"><img th:src="@{/resources/Interface/icons/print.png}"/></button> 
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<script>
+function myFunction() {
+    window.print();
+}
+</script>
+
+
+</div>
+
+
+
+
+            
+            
+      	</div><!-- end of div.box-container -->
+      	</div> <!-- end of div.box -->
+      
+      </div><!-- end of div#mid-col --><!-- end of div#right-col -->     
+      
+      <span class="clearFix">&nbsp;</span>     
+</div><!-- end of div#content -->
+<div class="push"></div>
+</div><!-- end of #container -->
+
+<div id="footer-wrap">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">CSS</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2013 Consultancy Software Solution. <a href="">CSS</a>, 
+            via <a href="">Orange Developers</a></p>
+        </div>
+        
+	</div>
+</div>
+
+
+
+</body>
+</html>

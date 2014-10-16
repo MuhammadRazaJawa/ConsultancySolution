@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- <form method="post" th:action="@{uploadDocuments}" enctype="multipart/form-data"> -->
+<form method="post" th:action="@{uploadFiles}" enctype="multipart/form-data" modelAttribute="files">
+ 
+    <p>Select files to upload. Press Add button to add more file inputs.</p>
+ 
+ 	Select images: <input type="file" name="files" multiple="multiple" />
+  <input type="submit"/>
+  <!-- 
+    <input id="addFile" type="button" value="Add File" />
+    <table id="fileTable">
+        <tr>
+            <td><input name="files[0]" type="file" /></td>
+        </tr>
+        <tr>
+            <td><input name="files[1]" type="file" /></td>
+        </tr>
+    </table>
+    <br/><input type="submit" value="Upload" /> -->
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>CSS</title>
+
+  <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/reset.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/style.css}" />
+
+  <link rel="stylesheet"  type="text/css"  th:href="@{/resources/Interface/js/jquery.wysiwyg.css}" />
+    <link rel="stylesheet"  type="text/css" media="screen"  th:href="@{/resources/Interface/js/colorbox.css}" />
+    <link  rel="stylesheet" type="text/css" media="screen" th:href="@{/resources/Interface/js/colorbox-custom.css}" />
+
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery-1.3.2.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.colorbox-min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.ui.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.corners.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/bg.pos.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.wysiwyg.js}"></script>
+    
+    <script type="text/javascript" th:src="@{/resources/Interface/js/tabs.pack.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/cleanity.js}"></script> 
+    
+    
+    <!-- ========================================================================================= -->
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/scripts/jquery-1.10.2.min.js}"></script>
+     <link rel="stylesheet" th:href="@{/resources/Interface/JQW/jqwidgets/styles/jqx.base.css}" type="text/css" />
+    <link rel="stylesheet" th:href="@{/resources/Interface/JQW/customCSS/cdatatable.css}" type="text/css" />
+            
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxcore.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxdata.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxbuttons.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxscrollbar.js}"></script>
+    
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxdropdownlist.js}"></script>
+    
+    
+    
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxlistbox.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/jqwidgets/jqxdatatable.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/demos/sampledata/generatedata.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/JQW/scripts/demos.js}"></script>
+    
+    
+    
+	  <script type="text/javascript" th:src="@{/resources/Interface/JQW/onlineJQW/inlinekeywords.js}"></script>
+	  <script type="text/javascript" th:src="@{/resources/Interface/JQW/onlineJQW/pconfig.js}"></script>
+	  
+	  <!-- ========================================================================================= -->
+	  
+	  
+	      <script type="text/javascript">
+     
+   
+     
+        $(document).ready(function () {
+        	
+            var url = "/project/consultancy/viewAllProgramOfStudyJson";
+         
+            // prepare the data
+            var source =
+            {
+                dataType: "json",
+                dataFields: [
+                    { name: 'programOfStudyId', type: 'int' },
+                    { name: 'awardingBody', type: 'string' },
+                    { name: 'titleOfCourse', type: 'string' },
+                    { name: 'startDate', type: 'int' },
+                    { name: 'yearOfEntry', type: 'string' },
+                    { name: 'clientName', map: 'generalDetailId>firstName' },
+                    { name: 'cellno', map: 'generalDetailId>mobileNumber' } 
+                
+                ],
+                id: 'id',
+                url: url
+            };
+            
+            var dataAdapter = new $.jqx.dataAdapter(source);
+            $("#dataTable").jqxDataTable(
+            {
+                width: 1400	,
+                pageable: true,
+                pagerButtonsCount: 10,
+                columnsResize: true,
+                source: dataAdapter,
+                filterable: true,
+                columns: [
+                  { text: 'Sr #', dataField: 'programOfStudyId' , width:60},
+                  { text: 'Awarding Body', dataField: 'awardingBody', width: 310},
+                  { text: 'Title Course', dataField: 'titleOfCourse', width: 310},
+                  { text: 'Start Date', dataField: 'startDate', width: 150},
+                  { text: 'Year of Entry', dataField: 'yearOfEntry', width: 150},
+                  { text: 'Client Name', dataField: 'clientName', width: 200 },
+                  { text: 'Cell No', dataField: 'cellno', width: 200 }
+             
+              ]
+            });
+            
+        });
+    </script>
+    
+	  
+	  
+
+
+</head>
+<body class='default'>
+
+ <div id="header">
+      <div id="top">
+     
+      <h1><a href="#">CSS </a></h1>
+      <p id="userbox">Hello <strong>Muhammad Raza</strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp;<a href="#">Logout</a> <br />
+      <small>Last Login: 12 May 2009</small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li class="selected"><a href="#">Dashboard</a></li>
+        <li><a class="top-level" href="#">Users <span>&nbsp;</span></a>
+          <ul>
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Edit Users</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a class="top-level" href="#">Settings <span>&nbsp;</span></a>
+            <ul>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">File Paths</a></li>
+            <li><a href="#">User Profiles</a></li>
+          </ul></li>
+      </ul>
+	
+      <span class="clearFix">&nbsp;</span>
+    
+    </div><!-- end of #header -->
+
+
+<div id="sndSERPSlider" class="hideOnLoad"></div>
+<div id="dataTable"></div>
+
+
+<div id="footer-wrap" style="position:relative; bottom: -300px; width: 100%">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+           
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">CSS</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2013 Consultancy Software Solution. <a href="">CSS</a>, 
+            via <a href="">Orange Developers</a></p>
+        </div>
+        
+	</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+

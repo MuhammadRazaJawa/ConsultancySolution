@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+<div th:if="${allEducationalDetailList != null}">
+	<table border="1">
+		<tr th:each="educationalDetail : ${allEducationalDetailList}">
+			<td th:text="${educationalDetail.educationalDetailId}"></td>
+			<td th:text="${educationalDetail.instituteName}"></td>
+			<td th:text="${educationalDetail.degreeName}"></td>
+			<td th:text="${educationalDetail.subject}"></td>
+			<td th:text="${educationalDetail.gradeAwarded}"></td>
+			<td th:text="${educationalDetail.dateAwarded}"></td>
+			<!-- <td th:text="${educationalDetail.generalDetailId.generalDetailId}"></td> -->
+			<td>
+				<a th:href="@{'getClientDetail?id=' + ${educationalDetail.generalDetailId.generalDetailId}}">Edit</a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div th:if="${allEducationalDetailList == null}">
+	<table border="1">
+		<tr>
+ 			<td>
+ 				<h1>No Data Found</h1>
+ 			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

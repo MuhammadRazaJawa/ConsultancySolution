@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+<div th:if="${allCurrentStudiesList != null}">
+
+	<table border="1">
+		<tr th:each="currentStudy : ${allCurrentStudiesList}">
+			<td th:text="${currentStudy.currentStudiesId}"></td>
+			<td th:text="${currentStudy.programTitle}"></td>
+			<td th:text="${currentStudy.university}"></td>
+			<td th:text="${currentStudy.city}"></td>
+			<td th:text="${currentStudy.country}"></td>
+			<td th:text="${currentStudy.startDate}"></td>
+			<td th:text="${currentStudy.endDate}"></td>
+			<td th:text="${currentStudy.higherLevelOfQualification}"></td>
+			<td th:text="${currentStudy.expectedDateOfCompletion}"></td>
+			<td th:text="${currentStudy.haveStudiedAbroad}"></td>
+			<!-- <td th:text="${currentStudy.generalDetailId.generalDetailId}"></td> -->
+			<td>
+				<a th:href="@{'getClientDetail?id=' + ${currentStudy.generalDetailId.generalDetailId}}">Edit</a>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div th:if="${allCurrentStudiesList == null}">
+
+	<table border="1">
+		<tr>
+ 
+ 			<td><h1>No Data Found</h1></td>
+		</tr>
+	</table>
+
+</div>
+</body>
+</html>

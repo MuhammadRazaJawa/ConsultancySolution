@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS</title>
+
+	
+	 <!-- ===================== Dashboard Interface ================================ -->
+	
+	<link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/reset.css}" />
+    <link  rel="stylesheet" type="text/css" th:href="@{/resources/Interface/style.css}" />
+    <link rel="stylesheet"  type="text/css"  th:href="@{/resources/Interface/js/jquery.wysiwyg.css}" />
+    <link rel="stylesheet"  type="text/css" media="screen"  th:href="@{/resources/Interface/js/colorbox.css}" />
+    <link  rel="stylesheet" type="text/css" media="screen" th:href="@{/resources/Interface/js/colorbox-custom.css}" />
+    
+    
+    
+
+
+
+	 
+ <!-- ========================  Dashboard Interface =========================================== -->	 
+	 
+     <script type="text/javascript" th:src="@{/resources/Interface/js/jquery-1.3.2.min.js}"></script> 
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.colorbox-min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.ui.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.corners.min.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/bg.pos.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/jquery.wysiwyg.js}"></script>    
+    <script type="text/javascript" th:src="@{/resources/Interface/js/tabs.pack.js}"></script>
+    <script type="text/javascript" th:src="@{/resources/Interface/js/cleanity.js}"></script> 
+    
+    
+    
+    
+
+     
+  	
+</head>
+
+<body>
+<div id="container">
+ 
+    <div id="header">
+      <div id="top">
+      <h1><a href="#">CSS</a></h1>
+      <p id="userbox">Hello <strong>Muhammad Raza</strong> &nbsp;| &nbsp;<a href="#">Settings</a> &nbsp;| &nbsp;<a href="#">Logout</a> <br />
+      <small>Last Login: 12 May 2009</small></p>
+      <span class="clearFix">&nbsp;</span>
+      </div>
+      <ul id="menu">
+        <li class="selected"><a th:href="@{/consultancy/goToHome}">Dashboard</a></li>
+        <li><a class="top-level" href="#">Users <span>&nbsp;</span></a>
+          <ul>
+            <li><a href="#">Add User</a></li>
+            <li><a href="#">Edit Users</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a class="top-level" href="#">Settings <span>&nbsp;</span></a>
+            <ul>
+            <li><a href="#">Site Settings</a></li>
+            <li><a href="#">File Paths</a></li>
+            <li><a href="#">User Profiles</a></li>
+          </ul></li>
+      </ul>
+	
+      <span class="clearFix">&nbsp;</span>
+    </div><!-- end of #header -->
+
+<div id="content">
+	<div id="content-top">
+    <h2>Dashboard</h2>
+     
+      <span class="clearFix">&nbsp;</span>
+      </div><!-- end of div#content-top -->
+      
+      
+        <div id="left-col">
+      
+      <div class="box">  	
+		  		<h4 class="light-blue">Quick Visual Links</h4>
+            <div class="box-container">
+		  		<ul id="quick-visual-links">
+		  			<li><a href="student.html"><img src="resources/Interface/images/ql-settings.gif" alt="" /><br/>Settings</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-users.gif" alt="" /><br/>Users</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-messages.gif" alt="" /><br/>Messages</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-photos.gif" alt="" /><br/>Photos</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-media.gif" alt="" /><br/>Media</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-design.gif" alt="" /><br/>Design</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-options.gif" alt="" /><br/>Options</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-databases.gif" alt="" /><br/>Databases</a></li>
+		  			<li><a href="#"><img src="resources/Interface/images/ql-paths.gif" alt="" /><br/>File Paths</a></li>   
+		  		</ul>
+                <span class="clearFix">&nbsp;</span> 
+          </div><!-- end of div.box-container -->            
+          </div><!-- end of div.box -->  
+
+
+    
+      <img style="margin-left:30px;"  src="resources/Interface/icons/logo.png" width="160px" height="150px" />
+ 
+          
+      </div> <!-- end of div#left-col -->
+      
+      
+      <div id="left-col">
+	
+          <div class="box" style="box-shadow: 10px 10px 10px  #888888;">
+              <h4 class="yellow">GENERAL INQUIRY STUDENT</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone list-links-->
+              <ul class="">
+              
+              
+           <!-- <li>  <a href="client.html"> <img style="margin-left:50px;" src="resources/Interface/icons/student-iconT.png" width="70px" height="70px" /> </a> </li> -->
+            <li><a th:href="@{/consultancy/goToGIQStudent}"> <img style="margin-left:50px;" src="resources/Interface/icons/inquiryIcon.png" width="70px" height="70px" /> </a> </li>
+                
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box -->
+          
+       
+  
+      </div> <!-- end of div#left-col -->
+      
+      
+       <div id="left-col">
+      
+          
+          
+          
+             <div class="box" style="box-shadow: 10px 10px 10px  #888888;">
+            
+              <h4 class="yellow">REGISTER A STUDENT</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone list-links-->
+              <ul class="">
+                  <li><a th:href="@{/consultancy/goToRegisterStudent}"> <img style="margin-left:50px;" src="resources/Interface/icons/registerIcon3.png" width="70px" height="70px" /> </a></li>
+                
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box -->
+           
+      
+      </div>  
+      
+     <div id="left-col">
+     		
+     		   
+           <div class="box" style="box-shadow: 10px 10px 10px  #888888;">
+              <h4 class="yellow">VIEWS FOR STUDENT</h4>
+          <div class="box-container"><!-- use no-padding wherever you need element padding gone list-links-->
+              <ul class="">
+                  <li><a href=""> <img style="margin-left:50px;" src="resources/Interface/icons/listIcon.png" width="70px" height="70px" /></a></li>
+               
+              </ul>
+          </div><!--end of div.box-container -->
+          </div><!-- end of div.box -->
+     
+     
+     </div>
+      
+      
+       <!--  <div id="right-col">
+		
+          <div class="box" >
+          		<h4 class="light-grey">Date &amp; Calendar</h4>
+         <div class="box-container">
+		  		<div id="date-container">
+		  	 	<img src="resources/Interface/images/sunny.png" alt="Sunny" /> <span class="hour"><small th:text="${#dates.format(#dates.createNow(), 'h:mm:a')}"> </small></span> <span class="date">
+		  	 	<small th:text="${#dates.format(#dates.createNow(), 'EEE, MMM d, yy')}"> </small></span>
+		  			<img th:src="@{resources/Interface/images/sunny.png}" alt="Sunny" /> <span class="hour" th:text="${#dates.format(#dates.createNow(), 'h:mm:a')}" >22:54</span>
+                 <span class="clearFix">&nbsp;</span>
+		  	</div>end of div#box-date
+		  	
+		  	
+		  	<div id="calendar-container">
+		  		<h5>Calendar</h5>
+				<div id="calendar"></div>
+		  	    	<div class="inner-nav">
+                		<div class="align-left"><a href="#"><span>+ add event</span></a></div>
+                		<div class="align-right"><a href="#"><span>? list events</span></a></div>
+                        <span class="clearFix">&nbsp;</span>
+                	</div> 
+		  	</div>end of div#calendar-container
+          </div>end of div.box-container  
+          </div>end of div.box  
+         	          
+      </div>end of div#right-col   -->   
+      
+      
+      
+     
+      <span class="clearFix">&nbsp;</span>     
+</div><!-- end of div#content -->
+<div class="push"></div>
+</div><!-- end of #container -->
+
+<div id="footer-wrap">
+	<div id="footer">
+        <div id="footer-top">
+        	<div class="align-left">
+            <h4>Dashboard</h4>
+            <p><a href="#">Dasboard Sub 1</a> | <a href="#">Dasboard Sub 2</a> | <a href="#">Dasboard Sub 3</a></p>
+        	</div>
+            <div class="align-right">
+            <h2><a href="#">CSS</a></h2>
+            </div>
+            <span class="clearFix"></span>
+        </div><!-- end of div#footer-top -->
+        
+        <div id="footer-bottom">
+        	<p>&copy; 2013 Consultancy Software Solution. <a href="">CSS</a>, 
+            via <a href="">Orange Developers</a></p>
+        </div>
+        
+	</div>
+</div>
+
+
+</body>
+</html>

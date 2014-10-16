@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+<link type="text/css" rel="stylesheet" th:href="@{/resources/css/select2.css}"></link>
+
+<script type="text/javascript">
+
+function test(){
+	var value = $("#testSelect").val();
+	alert("test: " + value);
+}
+
+function addToCC(){
+	//var ccSelect = '<h3>Select Recipients</h3> <select name="cc" id="mySel" class="select2" multiple="multiple" style="width:400px;"> <option th:each="client : ${clientEmailList}" th:value="${client.email}" th:text="${client.firstName} + ' , ' + ${client.email}"></option> </select>';
+	//$("#mailForm").append(ccSelect);
+	$("#cc").css("display","block");
+}
+
+function addToBCC(){
+	//var ccSelect = '<h3>Select Recipients</h3> <select name="cc" id="mySel" class="select2" multiple="multiple" style="width:400px;"> <option th:each="client : ${clientEmailList}" th:value="${client.email}" th:text="${client.firstName} + ' , ' + ${client.email}"></option> </select>';
+	//$("#mailForm").append(ccSelect);
+	$("#bcc").css("display","block");
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="container">
+<form id="mailForm" th:action="@{sendMail}" method="POST"> 
+
+Subject: <input type="text" name="subject" /> <br/><br/><br/>
+  Message: <input type="text" name="message" />
+  <br/><br/><br/><br/>
+  
+  <a href="javascript:addToCC();">Cc</a>
+  <a href="javascript:addToBCC()">Bcc</a>  
+  
+    <br/><br/><br/><br/>
+
+
+<div>
+  <h3>Recipient(s)</h3>
+  <select name="sendTo" id="mySel" class="select2" multiple="multiple" style="width:400px;">
+    <option th:each="client : ${clientEmailList}" th:value="${client.email}" th:text="${client.firstName} + ' , ' + ${client.email}"></option>
+  </select>
+  </div>
+
+	<div id="cc" style="display:none">
+  <h3>Cc:</h3>
+  <select name="cc" id="mySel2" class="select2" multiple="multiple" style="width:400px;">
+    <option th:each="client : ${clientEmailList}" th:value="${client.email}" th:text="${client.firstName} + ' , ' + ${client.email}"></option>
+  </select>
+  </div>
+  
+  
+	<div id="bcc" style="display:none">
+  <h3>Bcc</h3>
+  <select name="bcc" id="mySel3" class="select2" multiple="multiple" style="width:400px;">
+    <option th:each="client : ${clientEmailList}" th:value="${client.email}" th:text="${client.firstName} + ' , ' + ${client.email}"></option>
+  </select>
+  </div>
+  
+  <input type="submit" value="send mail" />
+  </form>
+</div>
+<script type="text/javascript" th:src="@{/resources/js/jquery-2.0.3.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/select2.js}"></script>
+<script type="text/javascript" th:src="@{/resources/js/selectJs.js}"></script>
+
+
+<script>
+$('form').submit(function(e){
+	e.preventDefault();
+	var submit = true;
+	// evaluate the form using generic validaing
+	if( !validator.checkAll( $(this) ) ){
+		submit = false;
+	}
+
+	if( submit )
+		this.submit();
+	return false;
+});
+
+
+</script>
+
+
+</body>
+</html>
