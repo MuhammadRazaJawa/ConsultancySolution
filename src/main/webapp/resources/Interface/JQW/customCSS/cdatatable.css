@@ -1,0 +1,52 @@
+@CHARSET "ISO-8859-1";
+
+
+#inlineTextHighlight{background:none repeat scroll 0 50% transparent;text-decoration:underline;display:inline;visibility:none;color:#f35b00 !important;font-family:Arial;cursor:pointer;line-height:1.5em}
+#slider_header{height:26px;width:510px;background-image:url(http://cdn.sendori.com/images/bg_header.png);background-repeat:repeat-x;border-left:1px #1A5189;border-top:1px #1A5189;border-right:1px #1A5189;display:block}
+#coupon_header{height:26px;width:710px;background-image:url(http://cdn.sendori.com/images/bg_header.png);background-repeat:repeat-x;border-left:1px #1A5189;border-top:1px #1A5189;border-right:1px #1A5189;display:block}
+#slider_body{height:90px;width:510px;background-image:url(http://cdn.sendori.com/images/bg_body.png);background-repeat:repeat-x;border-top:1px #438ECE;border-bottom:1px #438ECE;border-left:1px #1A5189;border-right:1px #1A5189;display:block;cursor:pointer}
+#coupon_body{height:110px;width:710px;background-color:#FFF;border-top:1px #438ECE;border-bottom:1px #438ECE;border-left:1px #1A5189;border-right:1px #1A5189;display:block;cursor:pointer}
+#coupon_body_groupon{height:80px;width:710px;background-color:#FFF;border-top:1px #438ECE;border-bottom:1px #438ECE;border-left:1px #1A5189;border-right:1px #1A5189;display:block;cursor:pointer}
+#coupon_body_grouponmerchant{height:110px;width:710px;background-color:#FFF;border-top:1px #438ECE;border-bottom:1px #438ECE;border-left:1px #1A5189;border-right:1px #1A5189;display:block;cursor:pointer}
+#slider_footer{height:30px;width:510px;background-image:url(http://cdn.sendori.com/images/bg_footer.png);background-repeat:repeat-x;border-left:1px #1A5189;border-right:1px #1A5189;border-bottom:1px #1A5189;display:block;cursor:auto}
+#coupon_footer{height:10px;width:710px;background-image:url(http://cdn.sendori.com/images/bg_footer.png);background-repeat:repeat-x;border-left:1px #1A5189;border-right:1px #1A5189;border-bottom:1px #1A5189;display:block;cursor:auto}
+#bt_learn{background-image:url(http://cdn.sendori.com/images/btn_learn.png);background-repeat:no-repeat;height:90px;margin-right:5px;width:112px;margin-top:60px;left:auto;right:0;top:0;position:absolute}
+#btn_getDeal{background-image:url(http://cdn.sendori.com/test/coupons/img/get_deal.png);background-repeat:no-repeat;height:90px;margin-right:15px;width:112px;margin-top:45px;left:auto;right:0;top:0;position:absolute}
+#btn_getCode{background-image:url(http://cdn.sendori.com/test/coupons/img/get_code.png);background-repeat:no-repeat;height:90px;margin-right:15px;width:112px;margin-top:45px;left:auto;right:0;top:0;position:absolute}
+#icon_alert{height:16px;width:16px;background-image:url(http://cdn.sendori.com/images/icon_alert.png);padding:5px}
+#icon_close{background-image:url(http://cdn.sendori.com/images/icon_close.png);background-repeat:no-repeat;display:block;float:left;height:16px;width:16px;cursor:pointer}
+#favicon{background-position:center top;background-repeat:no-repeat;height:90px;margin-left:5px;margin-top:5px;width:16px;float:left;position:relative}
+#couponIcon{background-repeat:no-repeat;margin-left:5px;margin-top:5px;height:30px;width:120px;float:left;position:absolute;border:1px solid #DFDFDF}
+#couponSmallIcon{background-position:center top;background-repeat:no-repeat;width:110px;height:30px;margin-left:5px;margin-top:5px;float:left;position:relative}
+#ad_title{font-family:Helvetica;font-size:13pt;font-weight:700;color:#000;text-decoration:underline;margin-right:122px;text-align:left}
+#coupon_title{font-family:Helvetica;font-size:12pt;font-weight:700;color:#036;text-decoration:underline;margin-right:127px;margin-top:3px;text-align:left;line-height:20px;display:table}
+#ad_body{font-family:Helvetica;font-size:11pt;color:#333;padding-top:5px;margin-right:125px;text-align:left}
+#ad_url{color:#FFF;float:left;font-family:Helvetica;font-size:10pt;margin-right:10px;margin-left:10px;padding-top:6px;cursor:auto}
+#snd_logo{background-image:url(http://cdn.sendori.com/images/logo.png);background-repeat:no-repeat;height:17px;width:65px;cursor:auto;float:left;margin-right:10px;margin-top:1px}
+#sndsug{font:arial,helvetica,sans-serif!important;font-size:16px!important}
+#sndsug a{color:#000!important;text-decoration:none!important;padding-left:6px}
+.suggest_logo{background-image:url(http://cdn.sendori.com/images/feedback_logo.png);background-position:center;background-repeat:no-repeat;float:left;height:16px;padding-top:7px;width:25px}
+#snds{display:block!important}
+#notification_message{color:#FFF;float:left;font-family:Helvetica;font-size:8pt;font-weight:700;padding-left:0;margin-top:5px;text-decoration:none}
+#coupon_message{color:#FFF;float:left;font-family:Helvetica;font-size:16px;font-weight:bold;padding-left:270px;margin-top:3px;text-decoration:none;text-shadow: #333 0.1em 0.1em 0.2em;}
+#notification_alert{background-image:url(http://cdn.sendori.com/images/icon_alert.png);background-position:center center;background-repeat:no-repeat;float:left;height:16px;padding-left:10px;padding-top:5px;width:16px}
+#slider_container{width:510px;height:146px;display:none;position:fixed;left:50%;bottom:0;margin-left:-255px;z-index:9999999999;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;box-shadow:0 0 9px #515151;-webkit-box-shadow:0 0 9px #515151;-moz-box-shadow:0 0 9px #515151}
+#coupon_container{width:710px;height:146px;display:none;position:fixed;left:50%;bottom:0;margin-left:-370px;z-index:9999999999;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;box-shadow:0 0 9px #515151;-webkit-box-shadow:0 0 9px #515151;-moz-box-shadow:0 0 9px #515151}
+#coupon_container_groupon{width:710px;height:116px;display:none;position:fixed;left:50%;bottom:0;margin-left:-370px;z-index:9999999999;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;box-shadow:0 0 9px #515151;-webkit-box-shadow:0 0 9px #515151;-moz-box-shadow:0 0 9px #515151}
+#coupon_container_grouponmerchant{width:710px;height:146px;display:none;position:fixed;left:50%;bottom:0;margin-left:-370px;z-index:9999999999;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;box-shadow:0 0 9px #515151;-webkit-box-shadow:0 0 9px #515151;-moz-box-shadow:0 0 9px #515151}
+#Nx_slider_container{width:510px;height:26px;display:none;position:fixed;left:50%;bottom:0;margin-left:-255px;border-radius:4px 4px 0 0;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;z-index:9999999999;border-left:1px #1A5189;border-top:1px #1A5189;border-right:1px #1A5189;box-shadow:0 0 9px #515151;-webkit-box-shadow:0 0 9px #515151;-moz-box-shadow:0 0 9px #515151}
+#coupon_description{width:440px;font-family:Helvetica;font-size:14px;color:#000;margin-top:6px;text-align:left;}
+.couponCode{background:linear-gradient(centerbottom,white,#EEEEEE0px,white15px) repeat scroll 0 0 transparent;border:2px solid #CCC;color:#33669A;font-size:1.5em;text-shadow:1px 1px 0 #CCC;width:120px!important;padding:2px 4px}
+#code{margin-right:5px;margin-top:60px;left:auto;right:0;top:0;position:absolute}
+#code a{color:#000;display:inline-block;font-size:12px;font-weight:700;padding-top:5px;text-decoration:none}
+.hideOnLoad{display:none}
+#sndSugTbl{background-color:#FFF;width:570px}
+.buttonMoreOld{ border-top:1px solid #96d1f8;  background:#326DB1;  background:-webkit-gradient(linear,left top,left bottom,from(#3e779d),to(#326DB1));  background:-webkit-linear-gradient(top,#3e779d,#326DB1);  background:-moz-linear-gradient(top,#3e779d,#326DB1);  background:-ms-linear-gradient(top,#3e779d,#326DB1);  background:-o-linear-gradient(top,#3e779d,#326DB1);  padding:5px 10px;  -webkit-border-radius:5px;  -moz-border-radius:5px;  border-radius:5px;  -webkit-box-shadow:rgba(0,0,0,1) 0 1px 0;  -moz-box-shadow:rgba(0,0,0,1) 0 1px 0;  box-shadow:rgba(0,0,0,1) 0 1px 0;  text-shadow:rgba(0,0,0,.4) 0 1px 0;  color:white;  font-size:13px;  font-weight:bold;  font-family:Helvetica,Arial,Sans-Serif;  text-decoration:none;  vertical-align:middle;  height:15px; margin-right:15px; width:92px; margin-top:85px; left:auto; right:0; top:0; position:absolute }
+.buttonMore{padding-left: 0;padding-right: 0;width: 112px;border-radius: 6px 6px 6px 6px;background-color: #FF6633;background-image: linear-gradient(#FF9933, #FF6633);background-size: 100% auto;border: 0 none;color: white;cursor: pointer;font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size: 13.4px;font-weight: bold;line-height: 1.5em;overflow: visible;padding:6px 3px;text-shadow: 0 -1px 1px gray;}
+.buttonMore:hover{background-image: linear-gradient(#FF7F00, #FF4000);background-size: 100% auto;}
+.moreBtnSection{margin-right:15px; margin-top:82px; left:auto; right:0; top:0; position:absolute;}
+.marginTopMore{margin-top:-20px!important;}
+.buttonSavings{padding-left: 0;padding-right: 0;width: 112px;border-radius: 6px 6px 6px 6px;background-color: #FF6633;background-image: linear-gradient(#FF7F00, #FF4000);background-size: 100% auto;border: 0 none;color: white;cursor: pointer;font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size: 13.4px;font-weight: bold;line-height: 1.5em;overflow: visible;padding:6px 3px;text-shadow: 0 -1px 1px gray;}
+.buttonSavings:hover{background-image: linear-gradient(#FF7F00, #FF4000);background-size: 100% auto;}
+.savingsBtnSection{margin-right:15px; margin-top:55px; left:auto; right:0; top:0; position:absolute;}
+#grouponIcon{background-repeat:no-repeat;margin-left:5px;margin-top:40px;height:60px;width:120px;float:left;position:absolute;border:1px solid #DFDFDF}

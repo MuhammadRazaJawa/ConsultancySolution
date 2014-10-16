@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+#personalDetail , #generalDetail , #posDetail , #languageDetail, #educationalDetail ,#workExperienceDetail,
+#personalStatementDetail, #referencesDetail, #declarationDetail, #addClientDetail , #searchClientDetail, #searchCriteriaDetail, #showAllDetail ,#cancelAllDetail ,
+#viewAllClientsBtn ,#emailClientDetail    {
+
+    background: transparent;
+    border: none !important;
+}​
+

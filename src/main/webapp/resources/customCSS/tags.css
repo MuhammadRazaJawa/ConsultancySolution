@@ -1,0 +1,90 @@
+@CHARSET "ISO-8859-1";
+
+h1
+{
+	
+	float:left; 
+	font-family:Tahoma, Geneva, sans-serif; 
+	font-size:22px; 
+	color:  #FF9A00;"	
+	
+}
+
+h3
+{
+	float:left; 
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:18px; 
+	
+}
+
+
+
+  .labelClass{
+  
+    float: left;
+    width: 110px;
+   	font-family:Tahoma, Geneva, sans-serif;
+	font-size:15px;
+	font-weight:400;
+	 margin-top: 10px;
+	 
+  }
+  
+  .inputClass{
+  
+    float: left;
+    width: 150px;
+    margin-top: 10px;
+    
+  }
+  
+  .selectClass{
+  
+   /*  float: left;
+  	margin-top: 8px; */
+    
+  }
+  
+  
+   input {
+ 			    
+    		 border-radius: 3px;    		 
+  		     border: 2px solid #FFAF1D; 
+   		     font-size:15px;
+			}
+			
+	input:focus
+			{
+				outline: none;
+			    border-color: #FF9A00;
+    			box-shadow: 0 0 10px #FF9A00;
+			} 
+			
+	.saveBtn
+		{
+			 background: transparent;
+    		border: none !important;
+    		float: right;
+		
+		}
+		.deleteBtn
+		{
+			    background: transparent;
+			    border: none !important;
+			    float: right;
+		
+		}
+		
+		.hiddenBtn
+		{
+		
+			    background: transparent;
+			    border: none !important;
+			   
+		
+		}
+		
+		}
+			
+	
